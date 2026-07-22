@@ -1,0 +1,1866 @@
+<html lang="vi" data-lang="vi"
+    data-tpt-cfg="{&quot;eq&quot;:&quot;normal&quot;,&quot;bass&quot;:0,&quot;mid&quot;:0,&quot;treble&quot;:0,&quot;audio360&quot;:false,&quot;speed&quot;:3,&quot;backgroundPlay&quot;:true,&quot;masterEnabled&quot;:true}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Nhật Minh - Ecommerce Manager &amp; Growth Operations</title>
+    <meta name="description"
+        content="Portfolio của Nguyễn Nhật Minh - Ecommerce Manager chuyên vận hành TikTok Shop với 2 năm kinh nghiệm tăng trưởng doanh thu và tối ưu chi phí quảng cáo.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&amp;family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500&amp;display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --ink: #14161a;
+            --paper: #ffffff;
+            --mist: #f4f6f9;
+            --navy: #1f3864;
+            --navy-2: #2e4e86;
+            --line: #e4e7ec;
+            --muted: #5c6470;
+            --maxw: 1120px;
+            --r: 14px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            font-family: "Be Vietnam Pro", system-ui, sans-serif;
+            color: var(--ink);
+            background: var(--paper);
+            line-height: 1.58;
+            font-size: 15px;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        img {
+            display: block;
+            max-width: 100%
+        }
+
+        .wrap {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 0 24px
+        }
+
+        /* language toggle */
+        [data-lang="vi"] .en {
+            display: none
+        }
+
+        [data-lang="en"] .vi {
+            display: none
+        }
+
+        /* ---------- header ---------- */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(255, 255, 255, .86);
+            backdrop-filter: saturate(160%) blur(10px);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 66px
+        }
+
+        .brand {
+            font-weight: 700;
+            letter-spacing: .1px;
+            font-size: 1rem
+        }
+
+        .brand span {
+            color: var(--navy)
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 26px;
+            font-size: .9rem;
+            font-weight: 500
+        }
+
+        .nav-links a {
+            color: var(--muted);
+            transition: color .2s
+        }
+
+        .nav-links a:hover {
+            color: var(--navy)
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 12px
+        }
+
+        .lang {
+            display: inline-flex;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            overflow: hidden;
+            font-size: .78rem;
+            font-weight: 600;
+        }
+
+        .lang button {
+            background: transparent;
+            border: 0;
+            cursor: pointer;
+            padding: 6px 12px;
+            color: var(--muted);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        .lang button.active {
+            background: var(--navy);
+            color: #fff
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: .88rem;
+            border: 1px solid var(--navy);
+            color: var(--navy);
+            background: #fff;
+            transition: all .2s;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: var(--navy);
+            color: #fff
+        }
+
+        .btn.solid {
+            background: var(--navy);
+            color: #fff
+        }
+
+        .btn.solid:hover {
+            background: var(--navy-2);
+            border-color: var(--navy-2)
+        }
+
+        .btn.small {
+            padding: 8px 15px;
+            font-size: .82rem
+        }
+
+        /* ---------- hero ---------- */
+        .hero {
+            padding: 64px 0 40px
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr .85fr;
+            gap: 48px;
+            align-items: center
+        }
+
+        .eyebrow {
+            font-size: .78rem;
+            font-weight: 700;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: var(--navy);
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-size: clamp(1.9rem, 3.8vw, 2.75rem);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -.3px
+        }
+
+        .hero .role {
+            font-size: clamp(.98rem, 1.5vw, 1.1rem);
+            font-weight: 600;
+            color: var(--ink);
+            margin-top: 12px
+        }
+
+        .hero p.lead {
+            color: var(--muted);
+            margin-top: 16px;
+            max-width: 36em;
+            font-size: .95rem
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 14px;
+            margin-top: 30px;
+            flex-wrap: wrap
+        }
+
+        .portrait {
+            display: flex;
+            justify-content: center;
+            align-items: center
+        }
+
+        .portrait img {
+            max-width: 100%;
+            max-height: 560px;
+            width: auto;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 26px 52px -30px rgba(20, 30, 55, .42);
+            display: block
+        }
+
+        /* ---------- section shell ---------- */
+        section {
+            padding: 66px 0
+        }
+
+        .band {
+            background: var(--mist);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line)
+        }
+
+        .sec-head {
+            margin-bottom: 38px;
+            max-width: 52em
+        }
+
+        .sec-num {
+            font-size: .78rem;
+            font-weight: 700;
+            letter-spacing: .18em;
+            color: var(--navy-2);
+            text-transform: uppercase
+        }
+
+        .sec-head h2 {
+            font-size: clamp(1.3rem, 2.4vw, 1.8rem);
+            font-weight: 700;
+            letter-spacing: .01em;
+            margin-top: 8px;
+            text-transform: uppercase
+        }
+
+        .sec-head p {
+            color: var(--muted);
+            margin-top: 12px
+        }
+
+        /* about */
+        .about-grid {
+            display: grid;
+            grid-template-columns: .8fr 1.2fr;
+            gap: 44px;
+            align-items: center
+        }
+
+        .about-grid .portrait img {
+            max-height: 460px
+        }
+
+        .about-text p {
+            margin-bottom: 16px;
+            color: #33383f
+        }
+
+        /* objective */
+        .objective {
+            font-size: clamp(1rem, 1.7vw, 1.22rem);
+            font-weight: 500;
+            line-height: 1.5;
+            max-width: 32em
+        }
+
+        .objective b {
+            color: var(--navy)
+        }
+
+        /* skills */
+        .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px
+        }
+
+        .skill {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: var(--r);
+            padding: 24px;
+            transition: transform .2s, box-shadow .2s, border-color .2s;
+        }
+
+        .skill:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 34px -26px rgba(31, 56, 100, .55);
+            border-color: #cdd6e4
+        }
+
+        .skill .k {
+            font-size: .72rem;
+            font-weight: 700;
+            color: var(--navy);
+            letter-spacing: .06em
+        }
+
+        .skill h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 10px 0 8px
+        }
+
+        .skill p {
+            font-size: .88rem;
+            color: var(--muted)
+        }
+
+        /* projects */
+        .project {
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            overflow: hidden;
+            background: #fff;
+            margin-bottom: 34px;
+            box-shadow: 0 20px 44px -34px rgba(20, 30, 55, .5);
+        }
+
+        /* compact text header (image moved into gallery) */
+        .p-body {
+            padding: 28px 34px 22px
+        }
+
+        .p-num {
+            font-size: .76rem;
+            font-weight: 700;
+            letter-spacing: .16em;
+            color: var(--navy-2);
+            text-transform: uppercase
+        }
+
+        .project h3 {
+            font-size: clamp(1.1rem, 1.55vw, 1.4rem);
+            font-weight: 700;
+            margin: 8px 0 5px;
+            letter-spacing: -.2px;
+            line-height: 1.24;
+            color: var(--ink)
+        }
+
+        .p-role {
+            font-size: .86rem;
+            color: var(--navy);
+            font-weight: 600;
+            margin: 0 0 16px
+        }
+
+        .p-intro {
+            color: var(--muted);
+            font-size: .96rem;
+            margin-bottom: 16px;
+            font-style: italic
+        }
+
+        .p-list {
+            list-style: none;
+            margin: 0 0 18px
+        }
+
+        .p-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 9px;
+            color: #3a3f47;
+            font-size: .95rem
+        }
+
+        .p-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 7px;
+            height: 7px;
+            background: var(--navy);
+            border-radius: 2px;
+            transform: rotate(45deg)
+        }
+
+        .p-list li b {
+            color: var(--navy);
+            font-weight: 600
+        }
+
+        .stat {
+            display: inline-flex;
+            flex-direction: column;
+            background: var(--mist);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 14px 20px;
+            margin: 4px 0 18px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+            cursor: pointer;
+        }
+
+        .stat:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+            background: #ffffff;
+        }
+
+        .stat:active {
+            transform: translateY(0) scale(0.98);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .stat b {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--navy);
+            line-height: 1
+        }
+
+        .stat span {
+            font-size: .8rem;
+            color: var(--muted);
+            margin-top: 4px
+        }
+
+        .gmv-gallery {
+            margin: 18px 0 8px;
+        }
+
+        .sub-heading {
+            font-size: .85rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin: 16px 0 10px;
+            padding-left: 4px;
+            letter-spacing: .02em;
+        }
+
+        .gmv-gallery h4 {
+            font-size: .85rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 12px;
+            letter-spacing: .02em;
+        }
+
+        .gmv-grid {
+            display: flex;
+            gap: 12px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 6px;
+        }
+
+        .gmv-grid::-webkit-scrollbar {
+            height: 4px;
+        }
+
+        .gmv-grid::-webkit-scrollbar-thumb {
+            background: var(--line);
+            border-radius: 4px;
+        }
+
+        .gmv-card {
+            position: relative;
+            flex: 1 1 0;
+            min-width: 0;
+            flex-shrink: 0;
+            scroll-snap-align: start;
+            background: var(--mist);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            overflow: hidden;
+            text-align: center;
+            transition: transform .25s ease, box-shadow .25s ease;
+            cursor: pointer;
+        }
+
+        .gmv-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
+        }
+
+        .gmv-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .gmv-card span {
+            display: block;
+            padding: 8px 6px;
+            font-size: .75rem;
+            font-weight: 600;
+            color: var(--muted);
+        }
+
+        .link-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 6px
+        }
+
+        .vlink {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 16px;
+            border-radius: 999px;
+            background: #fff;
+            border: 1px solid var(--line);
+            font-weight: 600;
+            font-size: .85rem;
+            color: var(--ink);
+            transition: all .2s;
+        }
+
+        .vlink:hover {
+            border-color: var(--navy);
+            color: var(--navy);
+            transform: translateY(-2px)
+        }
+
+        .vlink svg {
+            width: 15px;
+            height: 15px
+        }
+
+        /* galleries - clean, borderless */
+        .gallery {
+            display: grid;
+            gap: 12px;
+            padding: 4px 34px 32px
+        }
+
+        .g5 {
+            grid-template-columns: repeat(5, 1fr)
+        }
+
+        .g4 {
+            grid-template-columns: repeat(4, 1fr)
+        }
+
+        .g3 {
+            grid-template-columns: repeat(3, 1fr)
+        }
+
+        .g2 {
+            grid-template-columns: repeat(2, 1fr)
+        }
+
+        .gfeat {
+            grid-template-columns: repeat(2, 1fr)
+        }
+
+        .gfeat .wide {
+            grid-column: 1 / -1;
+            aspect-ratio: 16/6
+        }
+
+        .ach-gallery {
+            padding: 0
+        }
+
+        .ach-gallery .thumb {
+            aspect-ratio: 5/4
+        }
+
+        .thumb {
+            overflow: hidden;
+            border-radius: 12px;
+            background: none;
+            cursor: pointer;
+            position: relative;
+            box-shadow: 0 10px 22px -14px rgba(20, 30, 55, .45);
+        }
+
+        .thumb img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            transition: transform .35s
+        }
+
+        .thumb:hover img {
+            transform: scale(1.05)
+        }
+
+        /* Lớp phủ hiển thị số lượng ảnh ẩn */
+        .thumb-more::after {
+            content: attr(data-more);
+            position: absolute;
+            inset: 0;
+            background: transparent;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            font-weight: 700;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+            z-index: 2;
+            pointer-events: none;
+            /* Giúp sự kiện click xuyên qua lớp phủ vào thẻ img */
+        }
+
+        /* achievements */
+        .ach-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start
+        }
+
+        .ach-col h4 {
+            font-size: .82rem;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            color: var(--navy);
+            margin: 0 0 10px
+        }
+
+        .ach-list {
+            list-style: none;
+            margin: 0 0 26px
+        }
+
+        .ach-list li {
+            padding: 9px 0;
+            border-bottom: 1px solid var(--line);
+            color: #3a3f47;
+            font-size: .96rem
+        }
+
+        /* philosophy */
+        .quote {
+            display: grid;
+            grid-template-columns: 1.3fr .7fr;
+            gap: 44px;
+            align-items: center
+        }
+
+        .quote blockquote {
+            font-family: "Fraunces", Georgia, serif;
+            font-style: italic;
+            font-size: clamp(1.15rem, 2.2vw, 1.55rem);
+            line-height: 1.42;
+            color: var(--ink);
+            font-weight: 400;
+        }
+
+        .quote blockquote::before {
+            content: "\201C";
+            color: var(--navy);
+            font-size: 2.4em;
+            line-height: 0;
+            vertical-align: -.35em;
+            margin-right: .05em
+        }
+
+        .quote .portrait img {
+            max-height: 420px
+        }
+
+        /* contact */
+        .contact {
+            background: var(--navy);
+            color: #fff
+        }
+
+        .contact .sec-num {
+            color: #9fb4d6
+        }
+
+        .contact h2 {
+            color: #fff
+        }
+
+        .contact .sec-head p {
+            color: #c7d3e6
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center
+        }
+
+        .cinfo {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 14px
+        }
+
+        .cinfo li {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 1.02rem
+        }
+
+        .cinfo svg {
+            width: 20px;
+            height: 20px;
+            flex: none;
+            color: #9fb4d6
+        }
+
+        .contact .btn {
+            border-color: #fff;
+            color: #fff;
+            background: transparent
+        }
+
+        .contact .btn:hover {
+            background: #fff;
+            color: var(--navy)
+        }
+
+        .contact .btn.solid {
+            background: #fff;
+            color: var(--navy)
+        }
+
+        .social {
+            display: flex;
+            gap: 12px;
+            margin-top: 8px;
+            flex-wrap: wrap
+        }
+
+        footer {
+            padding: 26px 0;
+            text-align: center;
+            color: var(--muted);
+            font-size: .85rem;
+            border-top: 1px solid rgba(255, 255, 255, .12)
+        }
+
+        .contact footer {
+            border: 0
+        }
+
+        /* lightbox */
+        .lb {
+            position: fixed;
+            inset: 0;
+            background: rgba(10, 12, 16, .92);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+            padding: 30px
+        }
+
+        .lb.open {
+            display: flex
+        }
+
+        .lb img {
+            max-width: 92vw;
+            max-height: 88vh;
+            width: auto;
+            height: auto;
+            border-radius: 8px
+        }
+
+        .lb-close {
+            position: absolute;
+            top: 22px;
+            right: 26px;
+            color: #fff;
+            font-size: 2rem;
+            cursor: pointer;
+            line-height: 1;
+            background: none;
+            border: 0
+        }
+
+        .lb-prev,
+        .lb-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border: none;
+            width: 50px;
+            height: 50px;
+            font-size: 2rem;
+            cursor: pointer;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            user-select: none;
+            z-index: 110;
+        }
+
+        .lb-prev:hover,
+        .lb-next:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        .lb-prev {
+            left: 24px;
+        }
+
+        .lb-next {
+            right: 24px;
+        }
+
+        @media (max-width: 768px) {
+
+            .lb-prev,
+            .lb-next {
+                width: 40px;
+                height: 40px;
+                font-size: 1.5rem;
+            }
+
+            .lb-prev {
+                left: 10px;
+            }
+
+            .lb-next {
+                right: 10px;
+            }
+        }
+
+        /* reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(18px);
+            transition: opacity .6s ease, transform .6s ease
+        }
+
+        .reveal.in {
+            opacity: 1;
+            transform: none
+        }
+
+        /* focus */
+        a:focus-visible,
+        button:focus-visible,
+        .vlink:focus-visible {
+            outline: 2px solid var(--navy);
+            outline-offset: 3px
+        }
+
+        @media (prefers-reduced-motion:reduce) {
+            * {
+                scroll-behavior: auto !important;
+                transition: none !important;
+                animation: none !important
+            }
+
+            .reveal {
+                opacity: 1;
+                transform: none
+            }
+        }
+
+        /* ---------- responsive ---------- */
+        @media (max-width:900px) {
+            .nav-links {
+                display: none
+            }
+
+            .hero-grid,
+            .about-grid,
+            .ach-grid,
+            .quote,
+            .contact-grid {
+                grid-template-columns: 1fr
+            }
+
+            .hero {
+                padding: 40px 0 20px
+            }
+
+            .hero-grid {
+                gap: 32px
+            }
+
+            .portrait {
+                order: -1
+            }
+
+            .portrait img {
+                max-height: 440px
+            }
+
+            .skill-grid {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .g5,
+            .g4 {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .g3 {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .gfeat {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            section {
+                padding: 48px 0
+            }
+        }
+
+        @media (max-width:560px) {
+            .skill-grid {
+                grid-template-columns: 1fr
+            }
+
+            .g5,
+            .g4,
+            .g3,
+            .gfeat {
+                grid-template-columns: 1fr
+            }
+
+            .ach-gallery {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .p-body {
+                padding: 24px 22px
+            }
+
+            .gallery {
+                padding: 4px 22px 24px
+            }
+
+            .nav-right .btn.cvbtn {
+                display: none
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <div class="wrap nav">
+            <div class="brand">Nguyễn Nhật Minh<span>.</span></div>
+            <nav class="nav-links">
+                <a href="#about"><span class="vi">Giới thiệu</span><span class="en">About</span></a>
+                <a href="#skills"><span class="vi">Kỹ năng</span><span class="en">Skills</span></a>
+                <a href="#projects"><span class="vi">Kinh nghiệm</span><span class="en">Experience</span></a>
+                <a href="#awards"><span class="vi">Thành tựu</span><span class="en">Awards</span></a>
+                <a href="#contact"><span class="vi">Liên hệ</span><span class="en">Contact</span></a>
+            </nav>
+            <div class="nav-right">
+                <div class="lang" role="group" aria-label="Language">
+                    <button data-set="vi" class="active">VI</button>
+                    <button data-set="en">EN</button>
+                </div>
+                <a class="btn small cvbtn" href="cv.pdf" target="_blank" rel="noopener">CV (VI)</a>
+                <a class="btn small cvbtn" href="cv-en.pdf" target="_blank" rel="noopener">CV (EN)</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+        <div class="wrap hero-grid">
+            <div class="reveal in">
+                <h1>Nguyễn Nhật Minh</h1>
+                <div class="role">
+                    <span class="vi">Ecommerce Manager · Growth Operations · TikTok Shop</span>
+                    <span class="en">Ecommerce Manager · Growth Operations · TikTok Shop</span>
+                </div>
+                <p class="lead">
+                    <span class="vi">Tôi là Nhật Minh — chuyên gia vận hành TikTok Shop với 02 năm kinh nghiệm tập trung
+                        vào tăng trưởng doanh thu và tối ưu chi phí quảng cáo. Tôi trực tiếp xây dựng chiến lược, triển
+                        khai chiến dịch và chịu trách nhiệm toàn diện về KPI.</span>
+                    <span class="en">I'm Nhat Minh — a TikTok Shop operations expert with 2 years of experience focused
+                        on revenue growth and ad cost optimization. I independently build strategies, execute campaigns
+                        and take full KPI ownership.</span>
+                </p>
+                <div class="hero-cta">
+                    <a class="btn solid" href="#projects"><span class="vi">Xem kinh nghiệm</span><span class="en">View
+                            experience</span></a>
+                    <a class="btn" href="#contact"><span class="vi">Liên hệ</span><span class="en">Get in
+                            touch</span></a>
+                </div>
+            </div>
+            <div class="portrait reveal in">
+                <img src="photo/avt/1.jpg" alt="Nguyễn Nhật Minh">
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="band">
+        <div class="wrap about-grid">
+            <div class="portrait reveal in">
+                <img src="photo/avt/2.jpeg" alt="Nguyễn Nhật Minh">
+            </div>
+            <div class="about-text reveal in">
+                <div class="sec-num">01 · <span class="vi">Giới thiệu</span><span class="en">About me</span></div>
+                <div class="sec-head" style="margin-bottom:20px">
+                    <h2><span class="vi">Xin chào, tôi là Nhật Minh</span><span class="en">Hello, I'm Nhat Minh</span>
+                    </h2>
+                </div>
+                <p>
+                    <span class="vi">Tôi là Nhật Minh — Ecommerce Manager với hơn 02 năm kinh nghiệm thực chiến trong
+                        lĩnh vực vận hành TikTok Shop. Tôi tập trung vào tăng trưởng doanh thu bền vững và tối ưu toàn
+                        diện chi phí quảng cáo, từ Ads sàn đến Booking KOC.</span>
+                    <span class="en">I'm Nhat Minh — an Ecommerce Manager with over 2 years of hands-on experience in
+                        TikTok Shop operations. I focus on sustainable revenue growth and comprehensive ad cost
+                        optimization, from platform Ads to KOC Booking.</span>
+                </p>
+                <p>
+                    <span class="vi">Xuất phát từ vai trò host và nhân viên vận hành, tôi hiểu sâu từng công đoạn của
+                        một phiên live — từ setup kỹ thuật đến xây dựng kịch bản và tung deal — điều giúp tôi quản lý và
+                        đào tạo đội nhóm hiệu quả hơn.</span>
+                    <span class="en">Starting from a host and operations role, I understand every step of a live session
+                        — from technical setup to scripting and deal launches — which makes me a more effective team
+                        manager and trainer.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= OBJECTIVE ================= -->
+    <section>
+        <div class="wrap reveal in">
+            <div class="sec-num">02 · <span class="vi">Mục tiêu nghề nghiệp</span><span class="en">Career
+                    objective</span></div>
+            <div class="sec-head">
+                <h2><span class="vi">Điều tôi hướng tới</span><span class="en">What I'm aiming for</span></h2>
+            </div>
+            <p class="objective">
+                <span class="vi">Trở thành <b>chuyên gia tăng trưởng E-commerce</b> xuất sắc, với mục tiêu hỗ trợ <b>100
+                        doanh nghiệp và chủ shop</b> đạt mốc doanh thu 1 tỷ đồng bằng hệ thống vận hành tối ưu và hiệu
+                    quả.</span>
+                <span class="en">To become an outstanding <b>E-commerce Growth Expert</b>, with the goal of helping
+                    <b>100 businesses and shop owners</b> reach the 1-billion VND revenue milestone through optimized
+                    and efficient operating systems.</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section id="skills" class="band">
+        <div class="wrap">
+            <div class="sec-head reveal in">
+                <div class="sec-num">03 · <span class="vi">Kỹ năng</span><span class="en">Skills</span></div>
+                <h2><span class="vi">Năng lực chuyên môn</span><span class="en">Areas of expertise</span></h2>
+            </div>
+            <div class="skill-grid">
+                <div class="skill reveal in">
+                    <div class="k">01</div>
+                    <h3><span class="vi">Chiến lược Kinh doanh &amp; Tăng trưởng</span><span class="en">Business
+                            Strategy &amp; Growth</span></h3>
+                    <p><span class="vi">Hoạch định mục tiêu doanh số, phân tích thị trường và xây dựng kế hoạch tăng
+                            trưởng nhằm tối ưu hóa lợi nhuận.</span><span class="en">Define sales targets, analyze
+                            markets, and develop growth roadmaps to maximize profitability.</span></p>
+                </div>
+                <div class="skill reveal in">
+                    <div class="k">02</div>
+                    <h3><span class="vi">Vận hành Thương mại Điện tử</span><span class="en">E-commerce Operations</span>
+                    </h3>
+                    <p><span class="vi">Quản lý hệ sinh thái TikTok Shop &amp; Shopee (SEO, khuyến mại, Livestream,
+                            Video, Ads) nhằm tối đa hóa tỷ lệ chuyển đổi.</span><span class="en">Manage TikTok Shop
+                            &amp; Shopee systems (SEO, promotions, Livestreams, Videos, Ads) to maximize conversion
+                            rates.</span></p>
+                </div>
+                <div class="skill reveal in">
+                    <div class="k">03</div>
+                    <h3><span class="vi">Booking KOC/KOL</span><span class="en">KOC/KOL Booking</span></h3>
+                    <p><span class="vi">Triển khai chiến lược hợp tác KOC/KOL, quản lý quan hệ đối tác nhằm mở rộng độ
+                            phủ và thúc đẩy doanh số.</span><span class="en">Execute KOC/KOL partnership strategies and
+                            manage partner relationships to expand reach and drive sales.</span></p>
+                </div>
+                <div class="skill reveal in">
+                    <div class="k">04</div>
+                    <h3><span class="vi">Quản lý &amp; Đào tạo Livestream</span><span class="en">Livestream Management
+                            &amp; Training</span></h3>
+                    <p><span class="vi">Xây dựng quy trình vận hành và trực tiếp đào tạo đội ngũ (Host, kỹ thuật, vận
+                            hành) nhằm đảm bảo hiệu suất phiên live.</span><span class="en">Establish operational
+                            workflows and directly train teams (Hosts, technicians, operators) to ensure livestream
+                            performance.</span></p>
+                </div>
+                <div class="skill reveal in">
+                    <div class="k">05</div>
+                    <h3><span class="vi">Phân tích Hiệu suất &amp; Tối ưu hóa</span><span class="en">Performance
+                            Analysis &amp; Optimization</span></h3>
+                    <p><span class="vi">Theo dõi sát sao chỉ số kinh doanh (GMV, ROAS, CTR,...), phân tích dữ liệu để
+                            điều chỉnh chiến lược thúc đẩy tăng trưởng bền vững.</span><span class="en">Monitor business
+                            metrics (GMV, ROAS, CTR) and analyze data to adjust strategies for sustainable
+                            growth.</span></p>
+                </div>
+                <div class="skill reveal in">
+                    <div class="k">06</div>
+                    <h3><span class="vi">Content Creation</span><span class="en">Content Creation</span></h3>
+                    <p><span class="vi">Tự chủ hoàn toàn quy trình sáng tạo nội dung chuyên nghiệp: từ nghiên cứu, lên
+                            kịch bản, quay phim đến dựng hậu kỳ.</span><span class="en">Fully own the professional
+                            content creation workflow: from research, scriptwriting, and filming to
+                            post-production.</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section id="projects">
+        <div class="wrap">
+            <div class="sec-head reveal in">
+                <div class="sec-num">04 · <span class="vi">Kinh nghiệm làm việc</span><span class="en">Work
+                        Experience</span></div>
+                <h2><span class="vi">Kinh nghiệm làm việc</span><span class="en">Work Experience</span></h2>
+            </div>
+
+            <!-- Project 01 -->
+            <article class="project reveal in">
+                <div class="p-body">
+                    <div class="p-num">01</div>
+                    <h3><span class="vi">Vận hành TikTok Shop &amp; E-commerce</span><span class="en">TikTok Shop &amp;
+                            E-commerce Operations</span></h3>
+                    <div class="p-role"><span class="vi">Vai trò: Người vận hành</span><span class="en">Role: Operations
+                            Manager</span></div>
+                    <p class="p-intro">
+                        <span class="vi">Trực tiếp quản lý và vận hành các gian hàng TikTok Shop &amp; Shopee, phụ trách
+                            quy trình tối ưu và kiểm soát chi phí.</span>
+                        <span class="en">Directly managing and operating TikTok Shop &amp; Shopee storefronts,
+                            overseeing operational optimization and cost control.</span>
+                    </p>
+                    <ul class="p-list">
+                        <li><b><span class="vi">Quản lý &amp; Tối ưu gian hàng:</span><span class="en">Store Management
+                                    &amp; Optimization:</span></b> <span class="vi">Thiết lập, chuẩn hóa SEO (hình
+                                photo/nội dung) và cài đặt các chương trình khuyến mãi (Flash Sale, Voucher, Campaign)
+                                trên Shopee, TikTok Shop.</span><span class="en">Setting up, standardizing SEO
+                                (images/content) and configuring promotional programs (Flash Sale, Voucher, Campaign) on
+                                Shopee and TikTok Shop.</span></li>
+                        <li><b><span class="vi">Vận hành đơn hàng &amp; Tồn kho:</span><span class="en">Order &amp;
+                                    Inventory Operations:</span></b> <span class="vi">Theo dõi, xử lý đơn hàng, kiểm
+                                soát tồn kho, giải quyết hoàn/trả và phối hợp với các bộ phận (Kho, Sale, Design,
+                                Content) để đảm bảo chuỗi vận hành trơn tru.</span><span class="en">Monitoring and
+                                processing orders, controlling inventory, handling returns/refunds and coordinating with
+                                departments (Warehouse, Sales, Design, Content) to ensure smooth operations.</span></li>
+                        <li><b><span class="vi">Triển khai Marketing &amp; Ads:</span><span class="en">Marketing &amp;
+                                    Ads Execution:</span></b> <span class="vi">Trực tiếp chạy quảng cáo (Shopee/TikTok
+                                Ads) và hợp tác với KOC/Affiliate để kéo traffic, tối ưu doanh thu.</span><span
+                                class="en">Directly running paid ads (Shopee/TikTok Ads) and collaborating with
+                                KOCs/Affiliates to drive traffic and maximize revenue.</span></li>
+                        <li><b><span class="vi">Phân tích dữ liệu &amp; Báo cáo:</span><span class="en">Data Analysis
+                                    &amp; Reporting:</span></b> <span class="vi">Theo dõi các chỉ số vận hành (Traffic,
+                                CTR, CR, Doanh thu), lập báo cáo định kỳ và đề xuất phương án tối ưu hiệu quả gian
+                                hàng.</span><span class="en">Tracking operational metrics (Traffic, CTR, CR, Revenue),
+                                preparing periodic reports and proposing store optimization strategies.</span></li>
+                    </ul>
+                    <div
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 20px;">
+                        <div class="stat" style="margin-bottom: 0; padding: 16px;">
+                            <b style="font-size: 1.4rem; color: var(--navy);">~6.5 Tỷ / tháng</b>
+                            <span style="font-size: 0.9rem;"><span class="vi">Doanh thu duy trì (Shop 1)</span><span
+                                    class="en">Maintained revenue (Shop 1)</span></span>
+                        </div>
+                        <div class="stat" style="margin-bottom: 0; padding: 16px;">
+                            <b style="font-size: 1.4rem; color: var(--navy);">&gt;1.3 Tỷ / tháng</b>
+                            <span style="font-size: 0.9rem;"><span class="vi">Ngân sách quản lý (Shop 2)</span><span
+                                    class="en">Managed budget (Shop 2)</span></span>
+                        </div>
+                        <div class="stat" style="margin-bottom: 0; padding: 16px;">
+                            <b style="font-size: 1.4rem; color: var(--navy);">&gt;80 Tr / tháng</b>
+                            <span style="font-size: 0.9rem;"><span class="vi">Doanh thu khởi tạo (Shop 3)</span><span
+                                    class="en">Initial revenue (Shop 3)</span></span>
+                        </div>
+                    </div>
+                    <details style="margin-bottom: 20px; cursor: pointer;" open="">
+                        <summary
+                            style="font-weight: 600; color: rgb(255, 255, 255); user-select: none; padding: 12px 24px; background: rgb(26, 115, 232); border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; border-radius: 8px; display: inline-flex; align-items: center; gap: 8px; cursor: pointer; transition: 0.2s; box-shadow: rgba(26, 115, 232, 0.3) 0px 4px 6px; transform: translateY(0px);"
+                            onmouseover="this.style.background='#1557b0'; this.style.transform='translateY(-1px)'; this.style.boxShadow='0 6px 8px rgba(26,115,232,0.4)';"
+                            onmouseout="this.style.background='#1a73e8'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(26,115,232,0.3)';">
+                            <span class="vi">👉 Click để xem chi tiết 3 shop đang vận hành</span>
+                            <span class="en">👉 Click to view 3 operating shops</span>
+                        </summary>
+                        <div class="gmv-gallery" style="margin-top: 16px;">
+                            <div class="gmv-grid" style="flex-wrap: nowrap;">
+                                <div class="gmv-card">
+                                    <img src="photo/work/VN/total.png" alt="Ảnh vận hành shop 1">
+                                    <span>Shop 1</span>
+                                </div>
+                                <div class="gmv-card">
+                                    <img src="photo/work/HCM/total.png" alt="Ảnh vận hành shop 2">
+                                    <span>Shop 2</span>
+                                </div>
+                                <div class="gmv-card">
+                                    <img src="photo/work/HN/total.png" alt="Ảnh vận hành shop 3">
+                                    <span>Shop 3</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </details>
+
+                </div>
+            </article>
+
+            <!-- Project 02 -->
+            <article class="project reveal in">
+                <div class="p-body">
+                    <div class="p-num">02</div>
+                    <h3><span class="vi">Booking KOC/KOL</span><span class="en">KOC/KOL Booking</span></h3>
+                    <div class="p-role"><span class="vi">Vai trò: Booking Manager</span><span class="en">Role: Booking
+                            Manager</span></div>
+                    <p class="p-intro">
+                        <span class="vi">Xây dựng và thực thi các chiến dịch booking influencer trên nền tảng mạng xã
+                            hội nhằm tăng độ phủ thương hiệu.</span>
+                        <span class="en">Developing and executing influencer booking campaigns across social media
+                            platforms to expand brand awareness.</span>
+                    </p>
+                    <ul class="p-list">
+                        <li><b><span class="vi">Nghiên cứu &amp; Định vị:</span><span class="en">Research &amp;
+                                    Positioning:</span></b> <span class="vi">Phân tích sản phẩm, đối thủ và thị trường
+                                để xác định đúng tệp khách hàng mục tiêu, từ đó định hình chân dung KOC phù
+                                hợp.</span><span class="en">Analyzing products, competitors and the market to identify
+                                the right target audience and define the ideal KOC profile.</span></li>
+                        <li><b><span class="vi">Tìm kiếm &amp; Deal booking:</span><span class="en">Outreach &amp; Deal
+                                    Booking:</span></b> <span class="vi">Chủ động tìm kiếm KOC cùng ngành hàng, liên hệ,
+                                đàm phán (deal) chi phí/hoa hồng và kiểm soát, định hướng nội dung (brief/script) trước
+                                khi lên bài.</span><span class="en">Proactively sourcing KOCs in the same product
+                                category, reaching out, negotiating costs/commissions and directing content
+                                (brief/script) before publishing.</span></li>
+                        <li><b><span class="vi">Theo dõi &amp; Vận hành:</span><span class="en">Monitoring &amp;
+                                    Operations:</span></b> <span class="vi">Quản lý lịch trình lên bài của KOC, theo sát
+                                phản hồi của người xem (chăm sóc comment/seeding) và xử lý các vấn đề phát
+                                sinh.</span><span class="en">Managing KOC posting schedules, closely monitoring viewer
+                                feedback (comment management/seeding) and resolving issues as they arise.</span></li>
+                        <li><b><span class="vi">Phối hợp &amp; Tối ưu:</span><span class="en">Collaboration &amp;
+                                    Optimization:</span></b> <span class="vi">Làm việc với các phòng ban (Ads, Vận hành)
+                                để đánh giá hiệu quả, đề xuất tăng ngân sách push ads cho các clip lên xu hướng nhằm tối
+                                đa hóa doanh thu.</span><span class="en">Working with departments (Ads, Operations) to
+                                evaluate performance, proposing increased ad budgets for trending clips to maximize
+                                revenue.</span></li>
+                    </ul>
+                    <div class="stat" style="margin-bottom: 24px;">
+                        <b>+2 tỷ / tháng</b>
+                        <span><span class="vi">doanh thu tăng trưởng từ booking</span><span class="en">revenue growth
+                                from booking</span></span>
+                    </div>
+
+                    <!-- Gallery ảnh booking di chuyển vào trong p-body -->
+                    <div class="sub-heading" style="margin-top: 24px; margin-bottom: 12px;">
+                        <span class="vi">Doanh số các kênh Booking tiêu biểu</span>
+                        <span class="en">Key Booking Channels Revenue</span>
+                    </div>
+                    <div class="gmv-gallery">
+                        <div class="gmv-grid" style="flex-wrap: nowrap;">
+                            <div class="gmv-card" style="flex: 0 0 auto; width: 32%; min-width: 250px;">
+                                <img src="photo/booking/1.png" alt="Ảnh booking 1">
+                            </div>
+                            <div class="gmv-card" style="flex: 0 0 auto; width: 32%; min-width: 250px;">
+                                <img src="photo/booking/2.png" alt="Ảnh booking 2">
+                            </div>
+                            <div class="gmv-card" style="flex: 0 0 auto; width: 32%; min-width: 250px;">
+                                <img src="photo/booking/3.png" alt="Ảnh booking 3">
+                            </div>
+                            <div class="gmv-card" style="flex: 0 0 auto; width: 32%; min-width: 250px;">
+                                <img src="photo/booking/4.png" alt="Ảnh booking 4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 03 -->
+            <article class="project reveal">
+                <div class="p-body">
+                    <div class="p-num">03</div>
+                    <h3><span class="vi">Kênh cá nhân "Minh Măm Măm" — Content Creator</span><span class="en">Personal
+                            Channel "Minh Măm Măm" — Content Creator</span></h3>
+                    <div class="p-role"><span class="vi">Vai trò: Content Creator</span><span class="en">Role: Content
+                            Creator</span></div>
+                    <p class="p-intro">
+                        <span class="vi">Tự lên ý tưởng, quay dựng và chỉnh sửa video review tập trung vào hiệu suất
+                            chuyển đổi cho kênh TikTok cá nhân "Minh Măm Măm".</span>
+                        <span class="en">Self-directed ideation, filming and editing of conversion-focused review videos
+                            for personal TikTok channel "Minh Măm Măm".</span>
+                    </p>
+                    <ul class="p-list">
+                        <li><b><span class="vi">Bối cảnh:</span><span class="en">Context:</span></b> <span
+                                class="vi">Xây dựng kênh TikTok cá nhân định hướng review sản phẩm và chuyển đổi bán
+                                hàng.</span><span class="en">Building a personal TikTok channel focused on product
+                                reviews and sales conversion.</span></li>
+                        <li><b><span class="vi">Vai trò:</span><span class="en">Role:</span></b> <span
+                                class="vi">Content Creator — toàn quyền lên ý tưởng, quay dựng và chỉnh sửa
+                                video.</span><span class="en">Content Creator — full ownership of ideation, filming and
+                                video editing.</span></li>
+                        <li><b><span class="vi">Triển khai:</span><span class="en">Execution:</span></b> <span
+                                class="vi">Tập trung vào nội dung review có tỷ lệ chuyển đổi cao, tối ưu hook và CTA
+                                trong từng video.</span><span class="en">Focusing on high-conversion review content,
+                                optimizing hooks and CTAs in every video.</span></li>
+                        <li><b><span class="vi">Kết quả:</span><span class="en">Result:</span></b> <span class="vi">Tạo
+                                ra giá trị tổng hàng hóa bán ra (GMV) đạt 60+ triệu đồng từ kênh cá nhân.</span><span
+                                class="en">Generated 60M+ VND in Gross Merchandise Value (GMV) from the personal
+                                channel.</span></li>
+                    </ul>
+                    <div class="stat-group" style="display: flex; gap: 16px; margin: 4px 0 18px; flex-wrap: wrap;">
+                        <div class="stat" style="margin: 0; flex: 1; min-width: 120px;">
+                            <b>130M+ VND</b>
+                            <span><span class="vi">GMV Đức Review</span><span class="en">GMV Duc Review</span></span>
+                        </div>
+                        <div class="stat" style="margin: 0; flex: 1; min-width: 120px;">
+                            <b>100M+ VND</b>
+                            <span><span class="vi">GMV Minh Măm Măm</span><span class="en">GMV Minh Mam
+                                    Mam</span></span>
+                        </div>
+                        <div class="stat" style="margin: 0; flex: 1; min-width: 120px;">
+                            <b>20M+ VND</b>
+                            <span><span class="vi">GMV Loppy phong cách</span><span class="en">GMV Loppy
+                                    Style</span></span>
+                        </div>
+                    </div>
+                    <h4 class="sub-heading"><span class="vi">3.1 Kênh</span><span class="en">3.1 Channels</span></h4>
+                    <div class="gallery g3">
+                        <div class="thumb"><img src="photo/Content creater/1. Minh măm măm.jpeg" alt="Minh măm măm">
+                        </div>
+                        <div class="thumb"><img src="photo/Content creater/2. Đức review.jpeg" alt="Đức review"></div>
+                        <div class="thumb thumb-more" data-more="+3"><img src="photo/Content creater/3. Đồ hay.jpeg"
+                                alt="Đồ hay"></div>
+                        <div class="thumb" style="display: none;"><img
+                                src="photo/Content creater/4. loppy phong cách.jpeg" alt="loppy phong cách"></div>
+                        <div class="thumb" style="display: none;"><img src="photo/Content creater/5. Nàng review.jpeg"
+                                alt="Nàng review"></div>
+                        <div class="thumb" style="display: none;"><img
+                                src="photo/Content creater/6. Nhật Mink gia dụng.jpeg" alt="Nhật Mink gia dụng">
+                        </div>
+                    </div>
+
+                    <div class="gmv-gallery" style="margin-top: 24px; padding: 0 var(--container-padding, 0);">
+                        <h4 class="sub-heading" style="margin-left: 0; padding-left: 0;"><span class="vi">3.2 Doanh số
+                                các kênh</span><span class="en">3.2 Channel Revenue</span></h4>
+                        <div class="gmv-grid">
+                            <div class="gmv-card">
+                                <img src="photo/Content creater/GMV /minh măm măm .png" alt="GMV Minh Măm Măm">
+                                <span>Minh Măm Măm</span>
+                            </div>
+                            <div class="gmv-card">
+                                <img src="photo/Content creater/GMV /Đức review.png" alt="GMV Đức Review">
+                                <span>Đức Review</span>
+                            </div>
+                            <div class="gmv-card">
+                                <img src="photo/Content creater/GMV /loppy pc.png" alt="GMV Loppy Phong Cách">
+                                <span>Loppy phong cách</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 04 -->
+            <article class="project reveal">
+                <div class="p-body">
+                    <div class="p-num">04</div>
+                    <h3><span class="vi">Trưởng nhóm vận hành Livestream — Hannah Seyo</span><span class="en">Livestream
+                            Operations Leader — Hannah Seyo</span></h3>
+                    <div class="p-role"><span class="vi">Vai trò: Trưởng nhóm vận hành Livestream</span><span
+                            class="en">Role: Livestream Operations Team Leader</span></div>
+                    <ul class="p-list">
+                        <li><b><span class="vi">Hoạch định chiến lược &amp; Kịch bản:</span><span class="en">Strategy
+                                    Planning &amp; Scripting:</span></b> <span class="vi">Xây dựng kế hoạch tuần/tháng,
+                                thiết kế concept, kịch bản bán hàng đa nền tảng (TikTok, Shopee, Facebook) giúp tối ưu
+                                hiệu quả phiên live đạt doanh thu lên đến <b>150 triệu/phiên</b>.</span><span
+                                class="en">Building weekly/monthly plans, designing concepts and multi-platform sales
+                                scripts (TikTok, Shopee, Facebook) to optimize live session performance, achieving
+                                revenue of up to <b>150M VND/session</b>.</span></li>
+                        <li><b><span class="vi">Quản lý &amp; Đào tạo đội ngũ (15+ nhân sự):</span><span class="en">Team
+                                    Management &amp; Training (15+ staff):</span></b> <span class="vi">Tuyển dụng, đào
+                                tạo, điều phối và đánh giá hiệu suất làm việc của MC/Host, kỹ thuật live và bộ phận vận
+                                hành đơn hàng.</span><span class="en">Recruiting, training, coordinating and evaluating
+                                the performance of MC/Hosts, live technicians and order operations teams.</span></li>
+                        <li><b><span class="vi">Setup &amp; Vận hành kỹ thuật:</span><span class="en">Technical Setup
+                                    &amp; Operations:</span></b> <span class="vi">Trực tiếp thiết lập hệ thống thiết bị,
+                                ánh sáng, phần mềm bổ trợ (OBS, Prism) nhằm tối ưu hóa trải nghiệm nghe - nhìn của khách
+                                hàng trong suốt phiên live.</span><span class="en">Directly setting up equipment
+                                systems, lighting and supporting software (OBS, Prism) to optimize the audio-visual
+                                experience for customers throughout the live session.</span></li>
+                        <li><b><span class="vi">Phân tích số liệu &amp; Chịu trách nhiệm KPI:</span><span
+                                    class="en">Data Analysis &amp; KPI Accountability:</span></b> <span class="vi">Giám
+                                sát các chỉ số vận hành (lượt xem, tỷ lệ chuyển đổi, doanh thu, chi phí) để kịp thời đưa
+                                ra giải pháp cải thiện và tối ưu hóa lợi nhuận.</span><span class="en">Monitoring
+                                operational metrics (views, conversion rate, revenue, costs) to promptly implement
+                                improvement solutions and optimize profit.</span></li>
+                    </ul>
+                </div>
+                <div class="gallery g3" style="padding-bottom: 28px;">
+                    <div class="gmv-card">
+                        <img src="photo/live/gmv live/1.jpeg" alt="Hannah Seyo GMV Livestream 1">
+                        <span>GMV 156M+</span>
+                    </div>
+                    <div class="gmv-card">
+                        <img src="photo/live/gmv live/2.jpeg" alt="Hannah Seyo GMV Livestream 2">
+                        <span>GMV 119M+</span>
+                    </div>
+                    <div class="gmv-card thumb-more" data-more="+1">
+                        <img src="photo/live/gmv live/3.jpeg" alt="Hannah Seyo GMV Livestream 3">
+                        <span>GMV 106M+</span>
+                    </div>
+                    <div class="gmv-card" style="display: none;">
+                        <img src="photo/live/gmv live/4.jpeg" alt="Hannah Seyo GMV Livestream 4">
+                        <span>GMV 53M+</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 05 -->
+            <article class="project reveal">
+                <div class="p-body">
+                    <div class="p-num">05</div>
+                    <h3><span class="vi">Livestream Host &amp; Vận hành — Đa thương hiệu</span><span
+                            class="en">Livestream Host &amp; Operations — Multi-brand</span></h3>
+                    <div class="p-role"><span class="vi">Vai trò: Nhân viên vận hành / Livestream Host</span><span
+                            class="en">Role: Operations Staff / Livestream Host</span></div>
+                    <p class="p-intro">
+                        <span class="vi">Triển khai livestream, xây dựng kịch bản và tung deal bán hàng trực tiếp cho
+                            nhiều thương hiệu khác nhau, tích lũy kinh nghiệm thực chiến toàn diện.</span>
+                        <span class="en">Executing livestreams, building scripts and launching deals live for multiple
+                            brands, accumulating comprehensive hands-on experience.</span>
+                    </p>
+                    <ul class="p-list">
+                        <li><b><span class="vi">Các thương hiệu đã triển khai:</span><span class="en">Brands worked
+                                    with:</span></b> <span class="vi">Ô Mai Nhật Anh, Ô Mai Cháy, Bizbooks, Đồ tập tại
+                                nhà, Mồi câu cá Hùng Vương, Nuwacoffee, HannahSeyo, và TikToker Vanh Làm Đẹp (200K
+                                followers), Polytino, The Bad God.</span><span class="en">O Mai Nhat Anh, O Mai Chay,
+                                Nuwacoffee, HannahSeyo and TikToker Vanh Lam Dep (200K followers), The Bad God.</span>
+                        </li>
+                        <li><b><span class="vi">Nhiệm vụ:</span><span class="en">Responsibilities:</span></b> <span
+                                class="vi">Dẫn sóng trực tiếp, xây dựng kịch bản deal, tương tác khán giả và tối ưu tỷ
+                                lệ chuyển đổi trong phiên live.</span><span class="en">Live hosting, deal scripting,
+                                audience engagement and real-time conversion optimization.</span></li>
+                        <li><b><span class="vi">Giá trị tích lũy:</span><span class="en">Value gained:</span></b> <span
+                                class="vi">Hiểu sâu cả hai phía — nghệ thuật dẫn sóng và khoa học vận hành — nền tảng
+                                vững chắc để quản lý đội nhóm sau này.</span><span class="en">Deep understanding of both
+                                sides — the art of hosting and the science of operations — a solid foundation for team
+                                management.</span></li>
+                    </ul>
+                </div>
+                <div class="gallery g3">
+                    <div class="thumb"><img src="photo/live/ảnh đi live/1.jpeg" alt="Livestream Host"></div>
+                    <div class="thumb"><img src="photo/live/ảnh đi live/2.jpeg" alt="Livestream Host"></div>
+                    <div class="thumb thumb-more" data-more="+7"><img src="photo/live/ảnh đi live/3.jpeg"
+                            alt="Livestream Host"></div>
+                    <div class="thumb" style="display: none;"><img src="photo/live/ảnh đi live/4.jpeg"
+                            alt="Livestream Host"></div>
+                    <div class="thumb" style="display: none;"><img src="photo/live/ảnh đi live/5.jpeg"
+                            alt="Livestream Host"></div>
+                    <div class="thumb" style="display: none;"><img src="photo/live/ảnh đi live/6.jpeg"
+                            alt="Livestream Host"></div>
+                    <div class="thumb" style="display: none;"><img src="photo/live/ảnh đi live/7.jpeg"
+                            alt="Livestream Host"></div>
+                    <div class="thumb" style="display: none;"><img src="photo/live/ảnh đi live/8.jpeg"
+                            alt="Livestream Host"></div>
+                    <div class="thumb" style="display: none;"><img src="photo/live/ảnh đi live/9.jpeg"
+                            alt="Livestream Host"></div>
+                    <div class="thumb" style="display: none;"><img src="photo/live/ảnh đi live/10.jpeg"
+                            alt="Livestream Host"></div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- ================= AWARDS ================= -->
+    <section id="awards" class="band">
+        <div class="wrap">
+            <div class="sec-head reveal">
+                <div class="sec-num">06 · <span class="vi">Thành tựu &amp; chứng chỉ</span><span class="en">Awards &amp;
+                        certificates</span></div>
+                <h2><span class="vi">Thành tựu nổi bật</span><span class="en">Highlights</span></h2>
+            </div>
+            <div class="ach-grid">
+                <div class="ach-col reveal">
+                    <h4><span class="vi">Học vấn</span><span class="en">Education</span></h4>
+                    <ul class="ach-list">
+                        <li><span class="vi">Cao đẳng Y Dược Tuệ Tĩnh (2023 – 10/2025)</span><span class="en">Tue Tinh
+                                College of Pharmacy (2023 – 10/2025)</span></li>
+                    </ul>
+                    <h4><span class="vi">Kinh nghiệm làm việc</span><span class="en">Work Experience</span></h4>
+                    <ul class="ach-list">
+                        <li><span class="vi">Vận hành &amp; Booking — 02 gian hàng TikTok Shop (~8 tỷ/tháng)</span><span
+                                class="en">Operations &amp; Booking — 2 TikTok Shops (~8B VND/month)</span></li>
+                        <li><span class="vi">Content Creator — Kênh "Minh Măm Măm" (GMV 60M+)</span><span
+                                class="en">Content Creator — "Minh Mam Mam" Channel (GMV 60M+ VND)</span></li>
+                        <li><span class="vi">Trưởng nhóm Livestream — Hannah Seyo (15+ nhân sự)</span><span
+                                class="en">Livestream Team Leader — Hannah Seyo (15+ staff)</span></li>
+                        <li><span class="vi">Livestream Host — Ô Mai Nhật Anh, Nuwacoffee, Vanh Làm Đẹp, The Bad
+                                God...</span><span class="en">Livestream Host — O Mai Nhat Anh, Nuwacoffee, Vanh Lam
+                                Dep, The Bad God...</span></li>
+                    </ul>
+                </div>
+                <div class="reveal">
+                    <div class="gallery g2 ach-gallery">
+                        <div class="thumb"><img data-base="giai-thuong-1" alt="Award" onerror="imgFallback(this)"
+                                data-ei="6" src="images/giai-thuong-1.JPEG" style="visibility: hidden;"></div>
+                        <div class="thumb"><img data-base="giai-thuong-2" alt="Award" onerror="imgFallback(this)"
+                                data-ei="6" src="images/giai-thuong-2.JPEG" style="visibility: hidden;"></div>
+                        <div class="thumb"><img data-base="giai-thuong-3" alt="Award" onerror="imgFallback(this)"
+                                data-ei="6" src="images/giai-thuong-3.JPEG" style="visibility: hidden;"></div>
+                        <div class="thumb"><img data-base="giai-thuong-4" alt="Award" onerror="imgFallback(this)"
+                                data-ei="6" src="images/giai-thuong-4.JPEG" style="visibility: hidden;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PHILOSOPHY ================= -->
+    <section>
+        <div class="wrap quote">
+            <div class="reveal">
+                <div class="sec-num" style="margin-bottom:18px">07 · <span class="vi">Phương châm làm việc</span><span
+                        class="en">Work philosophy</span></div>
+                <blockquote>
+                    <span class="vi">Tăng trưởng thực sự không đến từ may mắn — đó là kết quả của chiến lược đúng, hệ
+                        thống vận hành chặt chẽ và dữ liệu được đọc đúng hướng.</span>
+                    <span class="en">Real growth doesn't come from luck — it's the result of the right strategy, a
+                        disciplined operating system and data read in the right direction.</span>
+                </blockquote>
+            </div>
+            <div class="portrait reveal">
+                <img src="photo/avt/2.jpeg" alt="Nguyễn Nhật Minh">
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="contact">
+        <div class="wrap">
+            <div class="sec-head reveal">
+                <div class="sec-num">08 · <span class="vi">Liên hệ</span><span class="en">Contact</span></div>
+                <h2><span class="vi">Lời cảm ơn!</span><span class="en">Thank you!</span></h2>
+                <p><span class="vi">Cảm ơn Quý Nhà tuyển dụng đã dành thời gian xem portfolio của tôi. Tôi hy vọng những
+                        kinh nghiệm và trải nghiệm được chia sẻ trong portfolio này đã phần nào thể hiện năng lực, tư
+                        duy làm
+                        việc và tinh thần học hỏi của bản thân, cũng như những giá trị tôi mong muốn được đóng góp cho
+                        Quý công ty. Tôi rất mong có cơ hội được trao đổi thêm và sẵn sàng tham gia buổi phỏng vấn vào
+                        thời gian thuận tiện của Quý công ty.</span><span class="en">Thank you for taking the time to
+                        view my portfolio. I hope the experiences and journeys shared here reflect my capabilities,
+                        working mindset and eagerness to learn, as well as the value I hope to contribute to your
+                        company. I would welcome the opportunity to talk further and am ready to attend an interview at
+                        a time convenient for you.</span></p>
+            </div>
+            <div class="contact-grid">
+                <ul class="cinfo reveal">
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z">
+                            </path>
+                        </svg> 0943102588</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                            <path d="m22 6-10 7L2 6"></path>
+                        </svg> minncuteei@gmail.com</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg> <span class="vi">Thanh Trì, Hà Nội</span><span class="en">Thanh Tri, Ha Noi</span></li>
+                </ul>
+                <div class="reveal">
+                    <div class="hero-cta">
+                        <a class="btn solid" href="mailto:minncuteei@gmail.com"><span class="vi">Gửi
+                                email</span><span class="en">Send email</span></a>
+                        <a class="btn" href="cv.pdf" target="_blank" rel="noopener">CV (VI)</a>
+                        <a class="btn" href="cv-en.pdf" target="_blank" rel="noopener">CV (EN)</a>
+                    </div>
+                </div>
+            </div>
+            <footer>© 2026 Nguyễn Nhật Minh — Ecommerce Manager &amp; Growth Operations</footer>
+        </div>
+    </section>
+
+    <!-- lightbox -->
+    <div class="lb" id="lb">
+        <button class="lb-close" aria-label="Close">×</button>
+        <button class="lb-prev" aria-label="Previous">‹</button>
+        <button class="lb-next" aria-label="Next">›</button>
+        <img id="lbimg" src="" alt="">
+    </div>
+
+    <script>
+        // ---- image extension fallback (jpg/jpeg/png/webp, upper/lower) ----
+        var EXTS = ["jpg", "jpeg", "png", "webp", "JPG", "PNG", "JPEG"];
+        function setInitial(img) {
+            if (!img.dataset.base) return;
+            img.dataset.ei = "0";
+            img.src = "images/" + img.dataset.base + "." + EXTS[0];
+        }
+        function imgFallback(img) {
+            var i = parseInt(img.dataset.ei || "0", 10) + 1;
+            if (i >= EXTS.length) { img.style.visibility = "hidden"; return; }
+            img.dataset.ei = String(i);
+            img.src = "images/" + img.dataset.base + "." + EXTS[i];
+        }
+        document.querySelectorAll("img[data-base]").forEach(setInitial);
+
+        // ---- language toggle ----
+        var saved = null;
+        try { saved = localStorage.getItem("lang"); } catch (e) { }
+        if (saved) { document.documentElement.setAttribute("data-lang", saved); }
+        function setLang(l) {
+            document.documentElement.setAttribute("data-lang", l);
+            document.documentElement.setAttribute("lang", l);
+            try { localStorage.setItem("lang", l); } catch (e) { }
+            document.querySelectorAll(".lang button").forEach(function (b) {
+                b.classList.toggle("active", b.dataset.set === l);
+            });
+        }
+        document.querySelectorAll(".lang button").forEach(function (b) {
+            b.addEventListener("click", function () { setLang(b.dataset.set); });
+        });
+        setLang(document.documentElement.getAttribute("data-lang") || "vi");
+
+        // ---- scroll reveal ----
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("in");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.05, rootMargin: "0px 0px -50px 0px" });
+        document.querySelectorAll(".reveal").forEach(function (el) { observer.observe(el); });
+
+        // ---- lightbox ----
+        var lb = document.getElementById("lb"), lbimg = document.getElementById("lbimg");
+        var thumbImgs = [];
+        var currentIdx = -1;
+
+        // Cập nhật danh sách ảnh hiển thị thực tế thuộc cùng một nhóm (gallery)
+        function updateThumbList(clickedImg) {
+            if (!clickedImg) return;
+            var galleryContainer = clickedImg.closest(".gallery") || clickedImg.closest(".gmv-gallery");
+            if (galleryContainer) {
+                thumbImgs = Array.from(galleryContainer.querySelectorAll(".thumb img, .gmv-card img")).filter(function (img) {
+                    return window.getComputedStyle(img).visibility !== "hidden" && img.src !== "";
+                });
+            } else {
+                thumbImgs = [clickedImg];
+            }
+        }
+
+        function openLb(idx) {
+            if (idx < 0 || idx >= thumbImgs.length) return;
+            currentIdx = idx;
+            var img = thumbImgs[currentIdx];
+            lbimg.src = img.currentSrc || img.src;
+            lb.classList.add("open");
+        }
+
+        function showPrev() {
+            if (thumbImgs.length === 0) return;
+            var nextIdx = currentIdx - 1;
+            if (nextIdx < 0) nextIdx = thumbImgs.length - 1; // Vòng lặp về cuối
+            openLb(nextIdx);
+        }
+
+        function showNext() {
+            if (thumbImgs.length === 0) return;
+            var nextIdx = currentIdx + 1;
+            if (nextIdx >= thumbImgs.length) nextIdx = 0; // Vòng lặp về đầu
+            openLb(nextIdx);
+        }
+
+        // Đăng ký sự kiện click cho các thumbnail
+        document.addEventListener("click", function (e) {
+            if (e.target.matches(".thumb img, .gmv-card img")) {
+                var img = e.target;
+                if (window.getComputedStyle(img).visibility === "hidden") return;
+                updateThumbList(img);
+                var idx = thumbImgs.indexOf(img);
+                if (idx !== -1) {
+                    openLb(idx);
+                }
+            }
+        });
+
+        function closeLb() { lb.classList.remove("open"); lbimg.src = ""; currentIdx = -1; }
+
+        lb.addEventListener("click", function (e) {
+            if (e.target === lb || e.target.classList.contains("lb-close")) closeLb();
+        });
+
+        document.querySelector(".lb-prev").addEventListener("click", function (e) {
+            e.stopPropagation();
+            showPrev();
+        });
+
+        document.querySelector(".lb-next").addEventListener("click", function (e) {
+            e.stopPropagation();
+            showNext();
+        });
+
+        // Hỗ trợ phím mũi tên
+        document.addEventListener("keydown", function (e) {
+            if (!lb.classList.contains("open")) return;
+            if (e.key === "Escape") closeLb();
+            else if (e.key === "ArrowLeft") showPrev();
+            else if (e.key === "ArrowRight") showNext();
+        });
+
+        // Hỗ trợ vuốt / lướt ảnh (Swipe gestures) trên di động & Kéo thả (Drag) trên máy tính
+        var startX = 0;
+        var endX = 0;
+        var isDragging = false;
+
+        lb.addEventListener("touchstart", function (e) {
+            startX = e.touches[0].clientX;
+        }, { passive: true });
+
+        lb.addEventListener("touchend", function (e) {
+            endX = e.changedTouches[0].clientX;
+            handleSwipe();
+        }, { passive: true });
+
+        lb.addEventListener("mousedown", function (e) {
+            startX = e.clientX;
+            isDragging = true;
+        });
+
+        lb.addEventListener("mouseup", function (e) {
+            if (!isDragging) return;
+            endX = e.clientX;
+            isDragging = false;
+            handleSwipe();
+        });
+
+        lb.addEventListener("mouseleave", function (e) {
+            isDragging = false;
+        });
+
+        function handleSwipe() {
+            var diff = startX - endX;
+            var threshold = 50; // Khoảng cách tối thiểu để nhận diện vuốt (px)
+            if (Math.abs(diff) > threshold) {
+                if (diff > 0) {
+                    showNext(); // Vuốt sang trái -> xem ảnh tiếp theo
+                } else {
+                    showPrev(); // Vuốt sang phải -> xem ảnh trước đó
+                }
+            }
+        }
+
+        // Toggle shop details when clicking stat box
+        var statToggle = document.getElementById("stat-toggle-shops");
+        var shopDetails = document.getElementById("project-01-shops");
+        if (statToggle && shopDetails) {
+            statToggle.addEventListener("click", function () {
+                if (shopDetails.style.display === "none") {
+                    shopDetails.style.display = "block";
+                } else {
+                    shopDetails.style.display = "none";
+                }
+            });
+        }
+    </script>
+
+
+    <div id="tpt-minibar"
+        style="position: fixed !important; visibility: visible !important; opacity: 1 !important; right: 12px !important; z-index: 2147483645 !important;">
+        <button class="tm-btn" id="tpt-btn-toggle" data-tip="Thu gọn / Mở rộng"><svg viewBox="0 0 24 24" fill="#FFC107"
+                stroke="#FFA000" stroke-width="1">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg></button><button class="tm-btn" id="tpt-btn-tools" data-tip="Công cụ"><svg viewBox="0 0 24 24"
+                fill="#555">
+                <path
+                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                </path>
+            </svg></button><button class="tm-btn" id="tpt-btn-pip" data-tip="Bật PiP"><svg viewBox="0 0 24 24">
+                <defs>
+                    <linearGradient id="gradPip" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color:#5DA9FF;stop-opacity:1"></stop>
+                        <stop offset="100%" style="stop-color:#357ABD;stop-opacity:1"></stop>
+                    </linearGradient>
+                </defs>
+                <rect x="2" y="4" width="20" height="16" rx="3" fill="url(#gradPip)"></rect>
+                <polygon points="10 9 15 12 10 15" fill="white"></polygon>
+            </svg></button><button class="tm-btn active" id="tpt-btn-speed" data-tip="3x"><svg viewBox="0 0 24 24">
+                <defs>
+                    <linearGradient id="gradSpeed" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color:#5DA9FF;stop-opacity:1"></stop>
+                        <stop offset="100%" style="stop-color:#357ABD;stop-opacity:1"></stop>
+                    </linearGradient>
+                </defs>
+                <polygon points="3 5 12 12 3 19" fill="url(#gradSpeed)"></polygon>
+                <polygon points="12 5 21 12 12 19" fill="url(#gradSpeed)"></polygon>
+            </svg><span class="tm-badge">3</span></button>
+        <div id="tpt-drag-handle" data-tip="Nhấn giữ để di chuyển"><svg viewBox="0 0 24 24">
+                <circle cx="9" cy="5" r="2"></circle>
+                <circle cx="9" cy="12" r="2"></circle>
+                <circle cx="9" cy="19" r="2"></circle>
+                <circle cx="15" cy="5" r="2"></circle>
+                <circle cx="15" cy="12" r="2"></circle>
+                <circle cx="15" cy="19" r="2"></circle>
+            </svg></div>
+    </div>
+    <div id="at-sel-tooltip" class="" style="display: block; left: 76px; top: 613.914px;">
+        <div class="at-tip-header">
+            <span>🔍 BẢN DỊCH</span>
+            <span id="at-sel-lang">→ VI</span>
+        </div>
+        <div class="at-tip-text" id="at-sel-text">📌 Case shop 1: Bứt phá doanh thu từ điểm chững &amp; Tối ưu chi phí
+            Ads
+            Bối cảnh: Doanh thu bị chững dài ngày, tệp khách cũ bão hòa, chi phí quảng cáo (Ads) tăng phi mã làm thu hẹp
+            biên lợi nhuận.
+            Giải pháp:
+            • Tối ưu phễu chuyển đổi: Chuẩn hóa SEO toàn diện (từ khóa, hình ảnh, nội dung) để tăng traffic tự nhiên;
+            thiết kế chuỗi Campaign &amp; Flash Sale</div>
+    </div>
+</body>
+
+</html>
