@@ -7,6 +7,8 @@
     <title>Nguyễn Nhật Minh - Ecommerce Manager &amp; Growth Operations</title>
     <meta name="description"
         content="Portfolio của Nguyễn Nhật Minh - Ecommerce Manager chuyên vận hành TikTok Shop với 2 năm kinh nghiệm tăng trưởng doanh thu và tối ưu chi phí quảng cáo.">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link
@@ -19,6 +21,7 @@
             --mist: #f4f6f9;
             --navy: #1f3864;
             --navy-2: #2e4e86;
+            --coral: #e05c3a;
             --line: #e4e7ec;
             --muted: #5c6470;
             --maxw: 1120px;
@@ -178,9 +181,63 @@
             font-size: .82rem
         }
 
+        /* ---------- particle canvas hero ---------- */
+        #hero-particles {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            border-radius: 0;
+        }
+
         /* ---------- hero ---------- */
         .hero {
-            padding: 64px 0 40px
+            padding: 64px 0 40px;
+            position: relative !important;
+            overflow: hidden;
+            min-height: 420px;
+        }
+
+        .hero .wrap {
+            position: relative;
+            z-index: 1;
+        }
+
+
+        /* ===================================================
+           SKILL CARDS
+        =================================================== */
+        .skill {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: var(--r);
+            padding: 24px;
+            transition: transform .2s, box-shadow .2s, border-color .2s;
+        }
+
+        .skill:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 34px -26px rgba(31, 56, 100, .55);
+            border-color: #cdd6e4;
+        }
+
+
+
+
+
+
+
+        /* ===================================================
+           LAYER 6 — GLASSMORPHISM PROJECT CARDS (not flipped)
+        =================================================== */
+        .project {
+            box-shadow:
+                0 4px 6px rgba(20, 30, 55, .04),
+                0 20px 44px -20px rgba(20, 30, 55, .14);
+            transition: transform .35s cubic-bezier(.23, 1, .32, 1),
+                box-shadow .35s ease;
         }
 
         .hero-grid {
@@ -203,14 +260,85 @@
             font-size: clamp(1.9rem, 3.8vw, 2.75rem);
             font-weight: 700;
             line-height: 1.1;
-            letter-spacing: -.3px
+            letter-spacing: -.3px;
+            position: relative;
+            z-index: 2;
         }
 
         .hero .role {
             font-size: clamp(.98rem, 1.5vw, 1.1rem);
             font-weight: 600;
-            color: var(--ink);
-            margin-top: 12px
+            color: var(--navy);
+            margin-top: 12px;
+            height: 1.6em;
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Hiệu ứng chuyển chữ mượt mà (Text Morph) */
+        .morphing-text {
+            display: inline-block;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .morphing-text.fade-out {
+            opacity: 0;
+            transform: translateY(-8px);
+        }
+
+        .morphing-text.fade-in {
+            opacity: 0;
+            transform: translateY(8px);
+        }
+
+        /* Khối Blob Morphing 3D Gradient */
+        .blob-container {
+            position: absolute;
+            right: 5%;
+            top: 20%;
+            width: 320px;
+            height: 320px;
+            z-index: 0;
+            filter: blur(10px);
+            opacity: 0.15;
+            pointer-events: none;
+            animation: rotate-blob 20s linear infinite;
+        }
+
+        .blob-shape {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 50%, #4b7bff 100%);
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            animation: morph-blob 8s ease-in-out infinite alternate;
+        }
+
+        @keyframes morph-blob {
+            0% {
+                border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            }
+
+            50% {
+                border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+            }
+
+            100% {
+                border-radius: 50% 50% 30% 70% / 50% 30% 60% 50%;
+            }
+        }
+
+        @keyframes rotate-blob {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         .hero p.lead {
@@ -521,7 +649,9 @@
 
         .gmv-card img {
             width: 100%;
-            height: auto;
+            height: 150px;
+            object-fit: cover;
+            object-position: top;
             display: block;
             border-bottom: 1px solid var(--line);
         }
@@ -603,7 +733,20 @@
         }
 
         .ach-gallery .thumb {
-            aspect-ratio: 5/4
+            aspect-ratio: unset;
+            background: #f4f6fa;
+            max-height: 200px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ach-gallery .thumb img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            display: block;
         }
 
         .thumb {
@@ -699,8 +842,18 @@
             margin-right: .05em
         }
 
+        .quote .portrait {
+            max-width: 220px;
+            margin: 0 auto;
+        }
+
         .quote .portrait img {
-            max-height: 420px
+            aspect-ratio: 9 / 16;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 16px;
+            max-height: none;
         }
 
         /* contact */
@@ -873,16 +1026,22 @@
             }
         }
 
-        /* reveal */
+        /* reveal hiệu ứng morph đẩy mềm mại khi lướt cuộn trang */
         .reveal {
             opacity: 0;
-            transform: translateY(18px);
-            transition: opacity .6s ease, transform .6s ease
+            transform: translateY(45px) scale(0.96) rotateX(4deg);
+            transform-origin: top center;
+            filter: blur(4px);
+            transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+                filter 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: transform, opacity, filter;
         }
 
         .reveal.in {
             opacity: 1;
-            transform: none
+            transform: translateY(0) scale(1) rotateX(0deg);
+            filter: blur(0);
         }
 
         /* focus */
@@ -985,6 +1144,18 @@
             .nav-right .btn.cvbtn {
                 display: none
             }
+
+            /* ảnh shop cuộn ngang trên mobile */
+            .gmv-card {
+                min-width: 160px !important;
+                width: 70vw !important;
+                max-width: 220px;
+            }
+
+            /* biểu đồ tăng trưởng gọn hơn trên mobile */
+            #growthChart {
+                height: 200px !important;
+            }
         }
     </style>
 </head>
@@ -999,7 +1170,7 @@
                 <a href="#about"><span class="vi">Giới thiệu</span><span class="en">About</span></a>
                 <a href="#skills"><span class="vi">Kỹ năng</span><span class="en">Skills</span></a>
                 <a href="#projects"><span class="vi">Kinh nghiệm</span><span class="en">Experience</span></a>
-                <a href="#awards"><span class="vi">Thành tựu</span><span class="en">Awards</span></a>
+                <a href="#awards"><span class="vi">Dấu ấn</span><span class="en">Highlights</span></a>
                 <a href="#contact"><span class="vi">Liên hệ</span><span class="en">Contact</span></a>
             </nav>
             <div class="nav-right">
@@ -1007,20 +1178,27 @@
                     <button data-set="vi" class="active">VI</button>
                     <button data-set="en">EN</button>
                 </div>
-                <a class="btn small cvbtn" href="cv.pdf" target="_blank" rel="noopener">CV (VI)</a>
-                <a class="btn small cvbtn" href="cv-en.pdf" target="_blank" rel="noopener">CV (EN)</a>
+                <a class="btn small cvbtn" href="cv/CV Nhật Minh-VN.pdf" target="_blank" rel="noopener">CV (VI)</a>
+                <a class="btn small cvbtn" href="cv/CV Nhật Minh-EN.pdf" target="_blank" rel="noopener">CV (EN)</a>
             </div>
         </div>
     </header>
 
     <!-- ================= HERO ================= -->
     <section class="hero">
+        <!-- ========== PARTICLE CANVAS (hero background) ========== -->
+        <canvas id="hero-particles"></canvas>
+
+        <!-- Khối Blob Morphing làm nền -->
+        <div class="blob-container">
+            <div class="blob-shape"></div>
+        </div>
+
         <div class="wrap hero-grid">
             <div class="reveal in">
                 <h1>Nguyễn Nhật Minh</h1>
                 <div class="role">
-                    <span class="vi">Ecommerce Manager · Growth Operations · TikTok Shop</span>
-                    <span class="en">Ecommerce Manager · Growth Operations · TikTok Shop</span>
+                    <span>Ecommerce Manager</span>
                 </div>
                 <p class="lead">
                     <span class="vi">Tôi là Nhật Minh — chuyên gia vận hành TikTok Shop với 02 năm kinh nghiệm tập trung
@@ -1205,43 +1383,189 @@
                     </ul>
                     <div
                         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 20px;">
-                        <div class="stat" style="margin-bottom: 0; padding: 16px;">
+                        <div class="stat stat-float-1" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare
+                            data-tilt-max-glare="0.08" style="margin-bottom: 0; padding: 16px;">
                             <b style="font-size: 1.4rem; color: var(--navy);">~6.5 Tỷ / tháng</b>
-                            <span style="font-size: 0.9rem;"><span class="vi">Doanh thu duy trì (Shop 1)</span><span
-                                    class="en">Maintained revenue (Shop 1)</span></span>
+                            <span style="font-size: 0.9rem;"><span class="vi">Doanh thu (Shop 1)</span><span
+                                    class="en">Revenue (Shop 1)</span></span>
                         </div>
-                        <div class="stat" style="margin-bottom: 0; padding: 16px;">
-                            <b style="font-size: 1.4rem; color: var(--navy);">&gt;1.3 Tỷ / tháng</b>
-                            <span style="font-size: 0.9rem;"><span class="vi">Ngân sách quản lý (Shop 2)</span><span
-                                    class="en">Managed budget (Shop 2)</span></span>
+                        <div class="stat stat-float-2" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare
+                            data-tilt-max-glare="0.08" style="margin-bottom: 0; padding: 16px;">
+                            <b style="font-size: 1.4rem; color: var(--navy);">&gt;1 Tỷ / tháng</b>
+                            <span style="font-size: 0.9rem;"><span class="vi">Doanh thu (Shop 2)</span><span
+                                    class="en">Revenue (Shop 2)</span></span>
                         </div>
-                        <div class="stat" style="margin-bottom: 0; padding: 16px;">
-                            <b style="font-size: 1.4rem; color: var(--navy);">&gt;80 Tr / tháng</b>
-                            <span style="font-size: 0.9rem;"><span class="vi">Doanh thu khởi tạo (Shop 3)</span><span
-                                    class="en">Initial revenue (Shop 3)</span></span>
+                        <div class="stat stat-float-3" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare
+                            data-tilt-max-glare="0.08" style="margin-bottom: 0; padding: 16px;">
+                            <b style="font-size: 1.4rem; color: var(--navy);">&gt;50 Tr / tháng</b>
+                            <span style="font-size: 0.9rem;"><span class="vi">Doanh thu (Shop 3)</span><span
+                                    class="en">Revenue (Shop 3)</span></span>
                         </div>
                     </div>
                     <details style="margin-bottom: 20px; cursor: pointer;" open="">
                         <summary
-                            style="font-weight: 600; color: rgb(255, 255, 255); user-select: none; padding: 12px 24px; background: rgb(26, 115, 232); border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; border-radius: 8px; display: inline-flex; align-items: center; gap: 8px; cursor: pointer; transition: 0.2s; box-shadow: rgba(26, 115, 232, 0.3) 0px 4px 6px; transform: translateY(0px);"
-                            onmouseover="this.style.background='#1557b0'; this.style.transform='translateY(-1px)'; this.style.boxShadow='0 6px 8px rgba(26,115,232,0.4)';"
-                            onmouseout="this.style.background='#1a73e8'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(26,115,232,0.3)';">
+                            style="font-weight: 600; color: rgb(255, 255, 255); user-select: none; padding: 12px 24px; background: var(--navy); border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; border-radius: 8px; display: inline-flex; align-items: center; gap: 8px; cursor: pointer; transition: 0.2s; box-shadow: rgba(31, 56, 100, 0.3) 0px 4px 6px; transform: translateY(0px);"
+                            onmouseover="this.style.background='var(--navy-2)'; this.style.transform='translateY(-1px)'; this.style.boxShadow='0 6px 8px rgba(31, 56, 100, 0.4)';"
+                            onmouseout="this.style.background='var(--navy)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(31, 56, 100, 0.3)';">
                             <span class="vi">👉 Click để xem chi tiết 3 shop đang vận hành</span>
                             <span class="en">👉 Click to view 3 operating shops</span>
                         </summary>
-                        <div class="gmv-gallery" style="margin-top: 16px;">
-                            <div class="gmv-grid" style="flex-wrap: nowrap;">
-                                <div class="gmv-card">
-                                    <img src="photo/work/VN/total.png" alt="Ảnh vận hành shop 1">
-                                    <span>Shop 1</span>
+
+                        <!-- Biểu đồ tăng trưởng -->
+                        <div style="margin-top: 20px; padding: 20px; background: var(--mist); border: 1px solid var(--line); border-radius: 12px;"
+                            onclick="event.stopPropagation();">
+                            <div
+                                style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; flex-wrap: wrap; gap: 12px;">
+                                <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--navy); margin: 0;">
+                                    <span class="vi">📈 Biểu đồ tăng trưởng doanh số</span>
+                                    <span class="en">📈 Sales Growth Chart</span>
+                                </h4>
+                                <!-- Tabs chọn Shop -->
+                                <div style="display: flex; gap: 8px;">
+                                    <button class="chart-tab active" data-shop="1"
+                                        style="padding: 6px 14px; border: 1px solid var(--navy); background: var(--navy); color: #fff; border-radius: 20px; font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: 0.2s;">Shop
+                                        1</button>
+                                    <button class="chart-tab" data-shop="2"
+                                        style="padding: 6px 14px; border: 1px solid var(--line); background: #fff; color: var(--muted); border-radius: 20px; font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: 0.2s;">Shop
+                                        2</button>
+                                    <button class="chart-tab" data-shop="3"
+                                        style="padding: 6px 14px; border: 1px solid var(--line); background: #fff; color: var(--muted); border-radius: 20px; font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: 0.2s;">Shop
+                                        3</button>
                                 </div>
-                                <div class="gmv-card">
-                                    <img src="photo/work/HCM/total.png" alt="Ảnh vận hành shop 2">
-                                    <span>Shop 2</span>
+                            </div>
+                            <div style="position: relative; height: 260px; width: 100%;">
+                                <canvas id="growthChart"></canvas>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 24px; display: flex; flex-direction: column; gap: 24px;">
+                            <!-- Shop 1 -->
+                            <div class="gmv-gallery">
+                                <h4
+                                    style="margin-bottom: 8px; font-size: 0.9rem; font-weight: 600; color: var(--navy); display: flex; gap: 8px;">
+                                    <span class="vi">🛍️ Shop 1 (Doanh thu ~6.5 Tỷ/tháng)</span>
+                                    <span class="en">🛍️ Shop 1 (Revenue ~6.5B/mo)</span>
+                                </h4>
+                                <div class="gmv-grid"
+                                    style="flex-wrap: nowrap; overflow-x: auto; display: flex; gap: 12px; padding-bottom: 8px;">
+                                    <div class="gmv-card" style="flex: 0 0 auto; width: 32%; min-width: 250px;">
+                                        <img src="photo/work/VN/total.png" alt="Tổng quan Shop 1">
+                                        <span><span class="vi">Tổng quan</span><span class="en">Overview</span></span>
+                                    </div>
+                                    <div class="gmv-card" style="flex: 0 0 auto; width: 32%; min-width: 250px;">
+                                        <img src="photo/work/VN/T6:2026 VN.png" alt="Tháng 6/2026 Shop 1">
+                                        <span>T6/2026</span>
+                                    </div>
+                                    <div class="gmv-card thumb-more" data-more="+7"
+                                        style="flex: 0 0 auto; width: 32%; min-width: 250px;">
+                                        <img src="photo/work/VN/T5:2026 VN.png" alt="Tháng 5/2026 Shop 1">
+                                        <span>T5/2026</span>
+                                    </div>
+                                    <!-- Ảnh ẩn của Shop 1 -->
+                                    <div class="gmv-card" style="display: none;">
+                                        <img src="photo/work/VN/T4:2026 VN.png" alt="Tháng 4/2026 Shop 1">
+                                        <span>T4/2026</span>
+                                    </div>
+                                    <div class="gmv-card" style="display: none;">
+                                        <img src="photo/work/VN/T3:2026 VN.png" alt="Tháng 3/2026 Shop 1">
+                                        <span>T3/2026</span>
+                                    </div>
+                                    <div class="gmv-card" style="display: none;">
+                                        <img src="photo/work/VN/T2:2026 VN.png" alt="Tháng 2/2026 Shop 1">
+                                        <span>T2/2026</span>
+                                    </div>
+                                    <div class="gmv-card" style="display: none;">
+                                        <img src="photo/work/VN/T1:2026 VN.png" alt="Tháng 1/2026 Shop 1">
+                                        <span>T1/2026</span>
+                                    </div>
+                                    <div class="gmv-card" style="display: none;">
+                                        <img src="photo/work/VN/T12 VN.png" alt="Tháng 12/2025 Shop 1">
+                                        <span>T12/2025</span>
+                                    </div>
+                                    <div class="gmv-card" style="display: none;">
+                                        <img src="photo/work/VN/T11 VN.png" alt="Tháng 11/2025 Shop 1">
+                                        <span>T11/2025</span>
+                                    </div>
+                                    <div class="gmv-card" style="display: none;">
+                                        <img src="photo/work/VN/T10 VN.png" alt="Tháng 10/2025 Shop 1">
+                                        <span>T10/2025</span>
+                                    </div>
                                 </div>
-                                <div class="gmv-card">
-                                    <img src="photo/work/HN/total.png" alt="Ảnh vận hành shop 3">
-                                    <span>Shop 3</span>
+                            </div>
+
+                            <!-- Shop 2 -->
+                            <div class="gmv-gallery">
+                                <h4
+                                    style="margin-bottom: 8px; font-size: 0.9rem; font-weight: 600; color: var(--navy); display: flex; gap: 8px;">
+                                    <span class="vi">🛍️ Shop 2 (Doanh thu >1 Tỷ/tháng)</span>
+                                    <span class="en">🛍️ Shop 2 (Revenue >1B/mo)</span>
+                                </h4>
+                                <div class="gmv-grid"
+                                    style="flex-wrap: nowrap; overflow-x: auto; display: flex; gap: 12px; padding-bottom: 8px;">
+                                    <div class="gmv-card" style="flex: 0 0 auto; width: 32%; min-width: 250px;">
+                                        <img src="photo/work/HCM/total.png" alt="Tổng quan Shop 2">
+                                        <span><span class="vi">Tổng quan</span><span class="en">Overview</span></span>
+                                    </div>
+                                    <div class="gmv-card" style="flex: 0 0 auto; width: 32%; min-width: 250px;">
+                                        <img src="photo/work/HCM/T6:2026 HCM.png" alt="Tháng 6/2026 Shop 2">
+                                        <span>T6/2026</span>
+                                    </div>
+                                    <div class="gmv-card thumb-more" data-more="+5"
+                                        style="flex: 0 0 auto; width: 32%; min-width: 250px;">
+                                        <img src="photo/work/HCM/T5:2026 HCM.png" alt="Tháng 5/2026 Shop 2">
+                                        <span>T5/2026</span>
+                                    </div>
+                                    <!-- Ảnh ẩn của Shop 2 -->
+                                    <div class="gmv-card" style="display: none;">
+                                        <img src="photo/work/HCM/T4:2026 HCM.png" alt="Tháng 4/2026 Shop 2">
+                                        <span>T4/2026</span>
+                                    </div>
+                                    <div class="gmv-card" style="display: none;">
+                                        <img src="photo/work/HCM/T3:2026 HCM.png" alt="Tháng 3/2026 Shop 2">
+                                        <span>T3/2026</span>
+                                    </div>
+                                    <div class="gmv-card" style="display: none;">
+                                        <img src="photo/work/HCM/T2:2026 HCM.png" alt="Tháng 2/2026 Shop 2">
+                                        <span>T2/2026</span>
+                                    </div>
+                                    <div class="gmv-card" style="display: none;">
+                                        <img src="photo/work/HCM/T1:2026 HCM.png" alt="Tháng 1/2026 Shop 2">
+                                        <span>T1/2026</span>
+                                    </div>
+                                    <div class="gmv-card" style="display: none;">
+                                        <img src="photo/work/HCM/T12 HCM.png" alt="Tháng 12/2025 Shop 2">
+                                        <span>T12/2025</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Shop 3 -->
+                            <div class="gmv-gallery">
+                                <h4
+                                    style="margin-bottom: 8px; font-size: 0.9rem; font-weight: 600; color: var(--navy); display: flex; gap: 8px;">
+                                    <span class="vi">🛍️ Shop 3 (Doanh thu >50 Tr/tháng)</span>
+                                    <span class="en">🛍️ Shop 3 (Revenue >50M/mo)</span>
+                                </h4>
+                                <div class="gmv-grid"
+                                    style="flex-wrap: nowrap; overflow-x: auto; display: flex; gap: 12px; padding-bottom: 8px;">
+                                    <div class="gmv-card" style="flex: 0 0 auto; width: 32%; min-width: 250px;">
+                                        <img src="photo/work/HN/total.png" alt="Tổng quan Shop 3">
+                                        <span><span class="vi">Tổng quan</span><span class="en">Overview</span></span>
+                                    </div>
+                                    <div class="gmv-card" style="flex: 0 0 auto; width: 32%; min-width: 250px;">
+                                        <img src="photo/work/HN/T7:2026 HN.png" alt="Tháng 7/2026 Shop 3">
+                                        <span>T7/2026</span>
+                                    </div>
+                                    <div class="gmv-card thumb-more" data-more="+1"
+                                        style="flex: 0 0 auto; width: 32%; min-width: 250px;">
+                                        <img src="photo/work/HN/T6:2026 HN.png" alt="Tháng 6/2026 Shop 3">
+                                        <span>T6/2026</span>
+                                    </div>
+                                    <!-- Ảnh ẩn của Shop 3 -->
+                                    <div class="gmv-card" style="display: none;">
+                                        <img src="photo/work/HN/T5:2026 HN.png" alt="Tháng 5/2026 Shop 3">
+                                        <span>T5/2026</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1370,7 +1694,8 @@
                     <div class="gallery g3">
                         <div class="thumb"><img src="photo/Content creater/1. Minh măm măm.jpeg" alt="Minh măm măm">
                         </div>
-                        <div class="thumb"><img src="photo/Content creater/2. Đức review.jpeg" alt="Đức review"></div>
+                        <div class="thumb"><img src="photo/Content creater/2. Đức review.jpeg" alt="Đức review">
+                        </div>
                         <div class="thumb thumb-more" data-more="+3"><img src="photo/Content creater/3. Đồ hay.jpeg"
                                 alt="Đồ hay"></div>
                         <div class="thumb" style="display: none;"><img
@@ -1519,9 +1844,9 @@
     <section id="awards" class="band">
         <div class="wrap">
             <div class="sec-head reveal">
-                <div class="sec-num">06 · <span class="vi">Thành tựu &amp; chứng chỉ</span><span class="en">Awards &amp;
-                        certificates</span></div>
-                <h2><span class="vi">Thành tựu nổi bật</span><span class="en">Highlights</span></h2>
+                <div class="sec-num">06 · <span class="vi">Hành trình &amp; Dấu ấn</span><span class="en">Journey &amp;
+                        Highlights</span></div>
+                <h2><span class="vi">Dấu ấn cá nhân</span><span class="en">Personal Highlights</span></h2>
             </div>
             <div class="ach-grid">
                 <div class="ach-col reveal">
@@ -1545,14 +1870,13 @@
                 </div>
                 <div class="reveal">
                     <div class="gallery g2 ach-gallery">
-                        <div class="thumb"><img data-base="giai-thuong-1" alt="Award" onerror="imgFallback(this)"
-                                data-ei="6" src="images/giai-thuong-1.JPEG" style="visibility: hidden;"></div>
-                        <div class="thumb"><img data-base="giai-thuong-2" alt="Award" onerror="imgFallback(this)"
-                                data-ei="6" src="images/giai-thuong-2.JPEG" style="visibility: hidden;"></div>
-                        <div class="thumb"><img data-base="giai-thuong-3" alt="Award" onerror="imgFallback(this)"
-                                data-ei="6" src="images/giai-thuong-3.JPEG" style="visibility: hidden;"></div>
-                        <div class="thumb"><img data-base="giai-thuong-4" alt="Award" onerror="imgFallback(this)"
-                                data-ei="6" src="images/giai-thuong-4.JPEG" style="visibility: hidden;"></div>
+                        <div class="thumb"><img src="photo/booking/1.png" alt="Operations & Booking — TikTok Shop">
+                        </div>
+                        <div class="thumb"><img src="photo/Content creater/1. Minh măm măm.jpeg"
+                                alt="Content Creator — Minh Măm Măm Channel"></div>
+                        <div class="thumb"><img src="photo/live/ảnh đi live/1.jpeg"
+                                alt="Livestream Team Leader — Hannah Seyo"></div>
+                        <div class="thumb"><img src="photo/live/ảnh đi live/2.jpeg" alt="Livestream Host"></div>
                     </div>
                 </div>
             </div>
@@ -1560,20 +1884,22 @@
     </section>
 
     <!-- ================= PHILOSOPHY ================= -->
-    <section>
+    <section class="band">
         <div class="wrap quote">
             <div class="reveal">
                 <div class="sec-num" style="margin-bottom:18px">07 · <span class="vi">Phương châm làm việc</span><span
                         class="en">Work philosophy</span></div>
                 <blockquote>
-                    <span class="vi">Tăng trưởng thực sự không đến từ may mắn — đó là kết quả của chiến lược đúng, hệ
+                    <span class="vi">Tăng trưởng thực sự không đến từ may mắn - đó là kết quả của chiến lược đúng, hệ
                         thống vận hành chặt chẽ và dữ liệu được đọc đúng hướng.</span>
                     <span class="en">Real growth doesn't come from luck — it's the result of the right strategy, a
                         disciplined operating system and data read in the right direction.</span>
                 </blockquote>
             </div>
-            <div class="portrait reveal">
-                <img src="photo/avt/2.jpeg" alt="Nguyễn Nhật Minh">
+            <div class="portrait reveal thumb">
+
+                <img src="photo/phuong%20cham%20lam%20viec.png" alt="Phương châm làm việc">
+
             </div>
         </div>
     </section>
@@ -1613,9 +1939,11 @@
                 </ul>
                 <div class="reveal">
                     <div class="hero-cta">
-                        <a class="btn solid" href="mailto:nhatminh.ecommerce@gmail.com?subject=Li%C3%AAn%20h%E1%BB%87%20t%E1%BB%9Bi%20Nh%E1%BA%ADt%20Minh&amp;body=Ch%C3%A0o%20anh%20Minh%2C%0A%0AT%C3%B4i%20mu%E1%BB%91n%20li%C3%AAn%20h%E1%BB%87%20v%E1%BB%9Bi%20anh%20v%E1%BB%81%3A%0A%0AH%E1%BB%8D%20v%C3%A0%20t%C3%AAn%3A%0AC%C3%B4ng%20ty%3A%0AS%E1%BB%91%20%C4%91i%E1%BB%87n%20tho%E1%BA%A1i%3A%0AN%E1%BB%99i%20dung%3A%0A%0ATr%C3%A2n%20tr%E1%BB%8Dng%2C"><span class="vi">Gửi email</span><span class="en">Send email</span></a>
-                        <a class="btn" href="cv.pdf" target="_blank" rel="noopener">CV (VI)</a>
-                        <a class="btn" href="cv-en.pdf" target="_blank" rel="noopener">CV (EN)</a>
+                        <a class="btn solid"
+                            href="mailto:nhatminh.ecommerce@gmail.com?subject=Th%C6%B0%20m%E1%BB%9Di%20h%E1%BB%A3p%20t%C3%A1c&amp;body=K%C3%ADnh%20g%E1%BB%ADi%20Anh%2FCh%E1%BB%8B%20HR%3A%20%C4%90%E1%BB%83%20ti%E1%BA%BFt%20ki%E1%BB%87m%20th%E1%BB%9Di%20gian%2C%20Anh%2FCh%E1%BB%8B%20c%C3%B3%20th%E1%BB%83%20s%E1%BB%AD%20d%E1%BB%A5ng%20khung%20n%E1%BB%99i%20dung%20g%E1%BB%A3i%20%C3%BD%20d%C6%B0%E1%BB%9Bi%20%C4%91%C3%A2y%3A%0A--------------%0A%0AG%E1%BB%ADi%3A%20%5BT%C3%AAn%20c%E1%BB%A7a%20b%E1%BA%A1n%5D%2C%0A%0AM%C3%ACnh%20l%C3%A0%20%5BT%C3%AAn%20HR%20%2F%20Ng%C6%B0%E1%BB%9Di%20li%C3%AAn%20h%E1%BB%87%5D%2C%20%C4%91%E1%BA%A1i%20di%E1%BB%87n%20b%E1%BB%99%20ph%E1%BA%ADn%20%5BTuy%E1%BB%83n%20d%E1%BB%A5ng%20%2F%20Qu%E1%BA%A3n%20l%C3%BD%20d%E1%BB%B1%20%C3%A1n%5D%20t%E1%BA%A1i%20%5BT%C3%AAn%20C%C3%B4ng%20ty%20%2F%20Th%C6%B0%C6%A1ng%20hi%E1%BB%87u%5D.%0A%0AM%C3%ACnh%20%C4%91%C3%A3%20xem%20qua%20Portfolio%20c%E1%BB%A7a%20b%E1%BA%A1n%20v%C3%A0%20r%E1%BA%A5t%20%E1%BA%A5n%20t%C6%B0%E1%BB%A3ng%20v%E1%BB%9Bi%20k%E1%BB%B9%20n%C4%83ng%20c%E1%BB%A7a%20b%E1%BA%A1n.%20Nh%E1%BA%ADn%20th%E1%BA%A5y%20n%C4%83ng%20l%E1%BB%B1c%20c%E1%BB%A7a%20b%E1%BA%A1n%20r%E1%BA%A5t%20ph%C3%B9%20h%E1%BB%A3p%20v%E1%BB%9Bi%20%C4%91%E1%BB%8Bnh%20h%C6%B0%E1%BB%9Bng%20hi%E1%BB%87n%20t%E1%BA%A1i%2C%20m%C3%ACnh%20tr%C3%A2n%20tr%E1%BB%8Dng%20g%E1%BB%ADi%20l%E1%BB%9Di%20m%E1%BB%9Di%20h%E1%BB%A3p%20t%C3%A1c%20%C4%91%E1%BA%BFn%20b%E1%BA%A1n%3A%0A%0A-------------%0A%0A%F0%9F%93%9E%20Th%C3%B4ng%20tin%20li%C3%AAn%20h%E1%BB%87%20tr%E1%BB%B1c%20ti%E1%BA%BFp%3A%0AH%E1%BB%8D%20v%C3%A0%20t%C3%AAn%20HR%3A%20%5BT%C3%AAn%20%C4%91%E1%BA%A7y%20%C4%91%E1%BB%A7%5D%0AS%E1%BB%91%20%C4%91i%E1%BB%87n%20tho%E1%BA%A1i%20%2F%20Zalo%3A%20%5BS%E1%BB%91%20%C4%91i%E1%BB%87n%20tho%E1%BA%A1i%5D%0AWebsite%20%2F%20Fanpage%3A%20%5B%C4%90%C6%B0%E1%BB%9Dng%20link%20website%20%2F%20trang%20c%C3%B4ng%20ty%5D%0A%0AR%E1%BA%A5t%20mong%20nh%E1%BA%ADn%20%C4%91%C6%B0%E1%BB%A3c%20ph%E1%BA%A3n%20h%E1%BB%93i%20t%E1%BB%AB%20b%E1%BA%A1n!"><span
+                                class="vi">Gửi email</span><span class="en">Send email</span></a>
+                        <a class="btn" href="cv/CV Nhật Minh-VN.pdf" target="_blank" rel="noopener">CV (VI)</a>
+                        <a class="btn" href="cv/CV Nhật Minh-EN.pdf" target="_blank" rel="noopener">CV (EN)</a>
                     </div>
                 </div>
             </div>
@@ -1794,6 +2122,135 @@
             }
         }
 
+        // ---- growth chart ----
+        var chartData = {
+            "1": {
+                labels: ["T10/25", "T11/25", "T12/25", "T1/26", "T2/26", "T3/26", "T4/26", "T5/26", "T6/26"],
+                data: [4.8, 5.2, 5.8, 5.5, 5.0, 6.2, 6.4, 6.5, 6.7],
+                label: "Doanh thu (Tỷ VNĐ)",
+                enLabel: "Revenue (Billion VND)"
+            },
+            "2": {
+                labels: ["T12/25", "T1/26", "T2/26", "T3/26", "T4/26", "T5/26", "T6/26"],
+                data: [750, 820, 780, 910, 950, 1050, 1150],
+                label: "Doanh thu (Triệu VNĐ)",
+                enLabel: "Revenue (Million VND)"
+            },
+            "3": {
+                labels: ["T5/26", "T6/26", "T7/26"],
+                data: [32, 45, 58],
+                label: "Doanh thu (Triệu VNĐ)",
+                enLabel: "Revenue (Million VND)"
+            }
+        };
+
+        var ctx = document.getElementById("growthChart");
+        if (ctx) {
+            ctx.addEventListener("click", function (e) { e.stopPropagation(); });
+            var currentLang = document.documentElement.getAttribute("data-lang") || "vi";
+            var activeShop = "1";
+
+            var config = {
+                type: 'line',
+                data: {
+                    labels: chartData[activeShop].labels,
+                    datasets: [{
+                        label: currentLang === "vi" ? chartData[activeShop].label : chartData[activeShop].enLabel,
+                        data: chartData[activeShop].data,
+                        borderColor: '#1f3864',
+                        backgroundColor: 'rgba(31, 56, 100, 0.08)',
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.35,
+                        pointBackgroundColor: '#1f3864',
+                        pointBorderColor: '#fff',
+                        pointBorderWidth: 2,
+                        pointRadius: 5,
+                        pointHoverRadius: 7
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    hover: {
+                        mode: 'index',
+                        intersect: false,
+                        animationDuration: 0
+                    },
+                    interaction: {
+                        mode: 'index',
+                        intersect: false
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            animation: {
+                                duration: 100
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            grid: { color: '#e4e7ec' },
+                            ticks: {
+                                color: '#5c6470',
+                                font: { family: 'Be Vietnam Pro', size: 11 }
+                            }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: {
+                                color: '#5c6470',
+                                font: { family: 'Be Vietnam Pro', size: 11 }
+                            }
+                        }
+                    }
+                }
+            };
+
+            var myChart = new Chart(ctx, config);
+
+            // Xử lý sự kiện click tab
+            document.querySelectorAll(".chart-tab").forEach(function (tab) {
+                tab.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    document.querySelectorAll(".chart-tab").forEach(function (t) {
+                        t.classList.remove("active");
+                        t.style.background = "#fff";
+                        t.style.color = "var(--muted)";
+                        t.style.borderColor = "var(--line)";
+                    });
+
+                    tab.classList.add("active");
+                    tab.style.background = "var(--navy)";
+                    tab.style.color = "#fff";
+                    tab.style.borderColor = "var(--navy)";
+
+                    activeShop = tab.dataset.shop;
+                    var lang = document.documentElement.getAttribute("data-lang") || "vi";
+
+                    myChart.data.labels = chartData[activeShop].labels;
+                    myChart.data.datasets[0].data = chartData[activeShop].data;
+                    myChart.data.datasets[0].label = lang === "vi" ? chartData[activeShop].label : chartData[activeShop].enLabel;
+                    myChart.update();
+                });
+            });
+
+            // Lắng nghe sự kiện chuyển ngôn ngữ để cập nhật biểu đồ
+            document.querySelectorAll(".lang button").forEach(function (btn) {
+                btn.addEventListener("click", function () {
+                    setTimeout(function () {
+                        var lang = document.documentElement.getAttribute("data-lang") || "vi";
+                        myChart.data.datasets[0].label = lang === "vi" ? chartData[activeShop].label : chartData[activeShop].enLabel;
+                        myChart.update();
+                    }, 50);
+                });
+            });
+        }
+
         // Toggle shop details when clicking stat box
         var statToggle = document.getElementById("stat-toggle-shops");
         var shopDetails = document.getElementById("project-01-shops");
@@ -1808,58 +2265,111 @@
         }
     </script>
 
+    <!-- ========== HERO PARTICLES — Tơ Nhện ========== -->
+    <script>
+        (function () {
+            var canvas = document.getElementById('hero-particles');
+            if (!canvas) return;
+            var ctx = canvas.getContext('2d');
+            var hero = document.querySelector('.hero');
+            if (!hero) return;
 
-    <div id="tpt-minibar"
-        style="position: fixed !important; visibility: visible !important; opacity: 1 !important; right: 12px !important; z-index: 2147483645 !important;">
-        <button class="tm-btn" id="tpt-btn-toggle" data-tip="Thu gọn / Mở rộng"><svg viewBox="0 0 24 24" fill="#FFC107"
-                stroke="#FFA000" stroke-width="1">
-                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-            </svg></button><button class="tm-btn" id="tpt-btn-tools" data-tip="Công cụ"><svg viewBox="0 0 24 24"
-                fill="#555">
-                <path
-                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
-                </path>
-            </svg></button><button class="tm-btn" id="tpt-btn-pip" data-tip="Bật PiP"><svg viewBox="0 0 24 24">
-                <defs>
-                    <linearGradient id="gradPip" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" style="stop-color:#5DA9FF;stop-opacity:1"></stop>
-                        <stop offset="100%" style="stop-color:#357ABD;stop-opacity:1"></stop>
-                    </linearGradient>
-                </defs>
-                <rect x="2" y="4" width="20" height="16" rx="3" fill="url(#gradPip)"></rect>
-                <polygon points="10 9 15 12 10 15" fill="white"></polygon>
-            </svg></button><button class="tm-btn active" id="tpt-btn-speed" data-tip="3x"><svg viewBox="0 0 24 24">
-                <defs>
-                    <linearGradient id="gradSpeed" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" style="stop-color:#5DA9FF;stop-opacity:1"></stop>
-                        <stop offset="100%" style="stop-color:#357ABD;stop-opacity:1"></stop>
-                    </linearGradient>
-                </defs>
-                <polygon points="3 5 12 12 3 19" fill="url(#gradSpeed)"></polygon>
-                <polygon points="12 5 21 12 12 19" fill="url(#gradSpeed)"></polygon>
-            </svg><span class="tm-badge">3</span></button>
-        <div id="tpt-drag-handle" data-tip="Nhấn giữ để di chuyển"><svg viewBox="0 0 24 24">
-                <circle cx="9" cy="5" r="2"></circle>
-                <circle cx="9" cy="12" r="2"></circle>
-                <circle cx="9" cy="19" r="2"></circle>
-                <circle cx="15" cy="5" r="2"></circle>
-                <circle cx="15" cy="12" r="2"></circle>
-                <circle cx="15" cy="19" r="2"></circle>
-            </svg></div>
-    </div>
-    <div id="at-sel-tooltip" class="" style="display: block; left: 76px; top: 613.914px;">
-        <div class="at-tip-header">
-            <span>🔍 BẢN DỊCH</span>
-            <span id="at-sel-lang">→ VI</span>
-        </div>
-        <div class="at-tip-text" id="at-sel-text">📌 Case shop 1: Bứt phá doanh thu từ điểm chững &amp; Tối ưu chi phí
-            Ads
-            Bối cảnh: Doanh thu bị chững dài ngày, tệp khách cũ bão hòa, chi phí quảng cáo (Ads) tăng phi mã làm thu hẹp
-            biên lợi nhuận.
-            Giải pháp:
-            • Tối ưu phễu chuyển đổi: Chuẩn hóa SEO toàn diện (từ khóa, hình ảnh, nội dung) để tăng traffic tự nhiên;
-            thiết kế chuỗi Campaign &amp; Flash Sale</div>
-    </div>
+            function resize() {
+                canvas.width = hero.offsetWidth;
+                canvas.height = hero.offsetHeight;
+                canvas.style.position = 'absolute';
+                canvas.style.top = '0';
+                canvas.style.left = '0';
+            }
+            resize();
+
+            var W = function () { return canvas.width; };
+            var H = function () { return canvas.height; };
+            var COUNT = 60;
+            var MAX_DIST = 120;
+            var mouse = { x: -999, y: -999 };
+
+            var heroRect = hero.getBoundingClientRect();
+            window.addEventListener('resize', function () {
+                resize();
+                heroRect = hero.getBoundingClientRect();
+            });
+            window.addEventListener('scroll', function () {
+                heroRect = hero.getBoundingClientRect();
+            }, { passive: true });
+
+            hero.addEventListener('mousemove', function (e) {
+                mouse.x = e.clientX - heroRect.left;
+                mouse.y = e.clientY - heroRect.top;
+            });
+            hero.addEventListener('mouseleave', function () {
+                mouse.x = -999;
+                mouse.y = -999;
+            });
+
+            function Particle() { this.reset(); }
+            Particle.prototype.reset = function () {
+                this.x = Math.random() * W();
+                this.y = Math.random() * H();
+                this.vx = (Math.random() - .5) * .45;
+                this.vy = (Math.random() - .5) * .45;
+                this.r = Math.random() * 2 + 1.2;
+                this.a = Math.random() * .35 + .45;
+            };
+            Particle.prototype.move = function () {
+                this.x += this.vx;
+                this.y += this.vy;
+                if (this.x < 0 || this.x > W()) this.vx *= -1;
+                if (this.y < 0 || this.y > H()) this.vy *= -1;
+            };
+            Particle.prototype.draw = function () {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+                ctx.fillStyle = 'rgba(31,56,100,' + this.a + ')';
+                ctx.fill();
+            };
+
+            var particles = [];
+            for (var i = 0; i < COUNT; i++) particles.push(new Particle());
+
+            function loop() {
+                ctx.clearRect(0, 0, W(), H());
+                for (var i = 0; i < particles.length; i++) {
+                    var p = particles[i];
+                    p.move();
+                    /* Dây nối giữa các hạt */
+                    for (var j = i + 1; j < particles.length; j++) {
+                        var q = particles[j];
+                        var d = Math.hypot(p.x - q.x, p.y - q.y);
+                        if (d < MAX_DIST) {
+                            ctx.beginPath();
+                            ctx.strokeStyle = 'rgba(31,56,100,' + ((1 - d / MAX_DIST) * .28) + ')';
+                            ctx.lineWidth = .8;
+                            ctx.moveTo(p.x, p.y);
+                            ctx.lineTo(q.x, q.y);
+                            ctx.stroke();
+                        }
+                    }
+                    /* Dây kéo về phía chuột */
+                    var dm = Math.hypot(p.x - mouse.x, p.y - mouse.y);
+                    if (dm < MAX_DIST * 1.4) {
+                        ctx.beginPath();
+                        ctx.strokeStyle = 'rgba(46,78,134,' + ((1 - dm / (MAX_DIST * 1.4)) * .6) + ')';
+                        ctx.lineWidth = 1.1;
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(mouse.x, mouse.y);
+                        ctx.stroke();
+                    }
+                    p.draw();
+                }
+                requestAnimationFrame(loop);
+            }
+            loop();
+        })();
+    </script>
+
+
+
 </body>
 
 </html>
